@@ -1,0 +1,181 @@
+= Asyncronous & reactive programming in Java
+
+== Presentation
+
+Work in progress...
+
+== Examples
+
+Work in progress...
+
+== Links
+
+=== Fundamentals
+
+* https://www.reactivemanifesto.org/[The reactive manifesto]
+* https://12factor.net/[12 Factor App]
+* https://www.reactive-streams.org/[Reactive Streams Specification]
+* https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow]
+* https://projectreactor.io/[Project Reactor]
+
+=== Main Reactive Streams implementations
+
+* https://projectreactor.io/[Project Reactor]
+* https://github.com/ReactiveX/RxJava[RxJava]
+* https://vertx.io/[VertX]
+* https://doc.akka.io/docs/akka/current/stream/index.html[Akka Streams]
+
+=== Spring ecosystem
+
+Work in progress...
+
+=== Other framework ecosystems
+
+Work in progress...
+
+=== Project Loom
+
+First and foremost: What is *Project Loom*?
+
+According to https://wiki.openjdk.java.net/display/loom/Main[OpenJDK Wiki]:
+
+====
+Project Loom is to intended to explore, incubate and deliver Java VM features and APIs built on top of them for the purpose of supporting easy-to-use, high-throughput lightweight concurrency and new programming models on the Java platform. This is accomplished by the addition of the following constructs:
+
+- Virtual threads
+- Delimited continuations
+- Tail-call elimination
+====
+
+[cols="6,3,2,1"]
+.Interesting articles and resources about Project Loom
+|===
+|Name |Author |Year |Info
+
+|https://wiki.openjdk.java.net/display/loom/Main[Loom - OpenJDK Wiki]
+| -
+| -
+|🇬🇧
+
+|https://youtu.be/23HjZBOIshY/[Project Loom: Modern Scalable Concurrency for the Java Platform]
+|Ron Pressler
+|2020
+|🇬🇧 📹
+
+|https://inside.java/2020/08/07/loom-performance/[On the performance of user-mode threads and coroutines]
+|Ron Pressler
+|2020
+|🇬🇧  📋
+
+|https://blog.frankel.ch/project-loom-reactive-coroutines/[On Project Loom, the Reactive model and coroutines]
+|Nicholas Frankel
+|2020
+|🇬🇧  📋
+
+|https://i-rant.arnaudbos.com/loom-part-0-rationale/[Loom - Part 0 - Rationale]
+|Arnaud Bos
+|2019
+|🇬🇧  📋
+
+|https://i-rant.arnaudbos.com/loom-part-1-scheduling/[Loom - Part 1 - It's all about Scheduling]
+|Arnaud Bos
+|2019
+|🇬🇧  📋
+
+|https://i-rant.arnaudbos.com/loom-part-2-blocking/[Loom - Part 2 - Blocking code]
+|Arnaud Bos
+|2019
+|🇬🇧  📋
+
+|https://i-rant.arnaudbos.com/loom-part-3-async/[Loom - Part 3 - Asynchronous code]
+|Arnaud Bos
+|2019
+|🇬🇧 📋
+
+|https://i-rant.arnaudbos.com/loom-part-4-nio/[Loom - Part 4 - Non-thread-blocking async I/O]
+|Arnaud Bos
+|2020
+|🇬🇧 📋
+|===
+
+=== Libraries and tools
+
+[cols="1,3"]
+.Recommended libraries and tools
+|===
+|Name |Description
+
+|https://visualvm.github.io/[VisualVM]
+|VisualVM is a visual tool integrating commandline JDK tools and lightweight profiling capabilities.
+Designed for both development and production time use
+
+|http://www.awaitility.org/[Awaitility]
+|Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner
+
+|https://github.com/reactor/BlockHound[BlockHound]
+|Java agent to detect blocking calls from non-blocking threads
+
+|https://github.com/reactor/reactor-core/tree/master/reactor-tools[Reactor Tools]
+|A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
+|===
+
+=== Books
+
+[cols="6,3,2,1"]
+.Recommended books
+|===
+|Name |Author |Year |Lang
+
+|https://www.goodreads.com/book/show/21799444-reactive-design-patterns[Reactive Design Patterns]
+|Roland Kuhn, Jamie Allen
+|2014
+|🇬🇧
+
+|https://www.goodreads.com/book/show/28321006-reactive-programming-with-rxjava[Reactive Programming with RxJava: Creating Asynchronous, Event-Based Applications]
+|Tomasz Nurkiewicz, Ben Christensen
+|2016
+|🇬🇧
+
+|https://www.goodreads.com/book/show/53722460-hacking-with-spring-boot-2-3[Hacking with Spring Boot 2.3: Reactive Edition]
+|Greg L. Turnquist
+|2020
+|🇬🇧
+
+|https://www.goodreads.com/book/show/49450069-reactive-spring[Reactive Spring]
+|Josh Long
+|2020
+|🇬🇧
+
+|https://www.goodreads.com/book/show/55182022-spring-boot[Spring Boot: Up and Running: Building Cloud Native Java and Kotlin Applications]
+|Mark Heckler
+|2021
+|🇬🇧
+|===
+
+=== Courses
+
+[cols="6,3,2,1"]
+.Recommended courses
+|===
+|Name |Author |Platform |Lang
+
+|https://learning.oreilly.com/library/view/reactive-spring-boot/9780136836421/[Reactive Spring, 2nd Edition]
+|Josh Long
+|Oreilly
+|🇬🇧
+
+|https://www.udemy.com/course/efficient-java-multithreading-with-executors/[Efficient Java Multithreading and Concurrency with Executors]
+|Arun Kumar
+|Udemy
+|🇬🇧
+|===
+
+== Who to follow?
+
+=== People
+
+Work in progress...
+
+=== Sites
+
+Work in progress...
