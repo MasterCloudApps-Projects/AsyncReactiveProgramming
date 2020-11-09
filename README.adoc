@@ -65,27 +65,27 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |https://inside.java/2020/08/07/loom-performance/[On the performance of user-mode threads and coroutines]
 |Ron Pressler
 |2020
-|🇬🇧  📋
+|🇬🇧 📋
 
 |https://blog.frankel.ch/project-loom-reactive-coroutines/[On Project Loom, the Reactive model and coroutines]
 |Nicholas Frankel
 |2020
-|🇬🇧  📋
+|🇬🇧 📋
 
 |https://i-rant.arnaudbos.com/loom-part-0-rationale/[Loom - Part 0 - Rationale]
 |Arnaud Bos
 |2019
-|🇬🇧  📋
+|🇬🇧 📋
 
 |https://i-rant.arnaudbos.com/loom-part-1-scheduling/[Loom - Part 1 - It's all about Scheduling]
 |Arnaud Bos
 |2019
-|🇬🇧  📋
+|🇬🇧 📋
 
 |https://i-rant.arnaudbos.com/loom-part-2-blocking/[Loom - Part 2 - Blocking code]
 |Arnaud Bos
 |2019
-|🇬🇧  📋
+|🇬🇧 📋
 
 |https://i-rant.arnaudbos.com/loom-part-3-async/[Loom - Part 3 - Asynchronous code]
 |Arnaud Bos
