@@ -9,12 +9,18 @@ This repository is intended to be a compilation of presentations, examples, link
 
 This initiative is part of the final project of: https://www.codeurjc.es/mastercloudapps/[*Máster Cloud Apps. Desarrollo y despliegue de aplicaciones en la nube*] [ 🇪🇸 ]
 
+ifdef::env-github[]
 ++++
 <p style="text-align:center">
-<img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" style="height:60px"/>
-<img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" style="height:75px"/>
+<img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" height="60"/>
+<img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" height="75"/>
 </p>
 ++++
+endif::[]
+ifndef::env-github[]
+image::https://www.urjc.es/images/Logos/logo-urjc-negro.png[align="center"]
+image::https://avatars2.githubusercontent.com/u/16519594?s=280&v=4[150,150,align="center"]
+endif::[]
 
 The project also provides, as documentation, a presentation about asynchronous and reactive programming in Java. You can check the slides here:
 
@@ -42,7 +48,6 @@ Work in progress...
 == 🔗 Resources
 
 === 👼🏻 Fundamentals
->>>>>>> Stashed changes
 
 * https://www.reactivemanifesto.org/[The reactive manifesto]
 * https://12factor.net/[12 Factor App]
