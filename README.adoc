@@ -11,7 +11,7 @@ This initiative is part of the final project of: https://www.codeurjc.es/masterc
 
 ifdef::env-github[]
 ++++
-<p style="text-align:center">
+<p align="center">
 <img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" height="60"/>
 <img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" height="75"/>
 </p>
