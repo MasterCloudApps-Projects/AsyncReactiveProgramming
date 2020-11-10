@@ -1,18 +1,3 @@
-<<<<<<< Updated upstream
-= Asyncronous & reactive programming in Java
-
-== Presentation
-
-Work in progress...
-
-== Examples
-
-Work in progress...
-
-== Links
-
-=== Fundamentals
-=======
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS
 v0.0.2, 2020-11-10
@@ -65,28 +50,13 @@ Work in progress...
 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow]
 * https://projectreactor.io/[Project Reactor]
 
-<<<<<<< Updated upstream
-=== Main Reactive Streams implementations
-=======
 === 👨‍👩‍👧‍👦 Main Reactive Streams implementations
->>>>>>> Stashed changes
 
 * https://projectreactor.io/[Project Reactor]
 * https://github.com/ReactiveX/RxJava[RxJava]
 * https://vertx.io/[VertX]
 * https://doc.akka.io/docs/akka/current/stream/index.html[Akka Streams]
 
-<<<<<<< Updated upstream
-=== Spring ecosystem
-
-Work in progress...
-
-=== Other framework ecosystems
-
-Work in progress...
-
-=== Project Loom
-=======
 === 🍀 Spring ecosystem
 
 [cols="6,3,2,1"]
@@ -159,7 +129,6 @@ Work in progress...
 |===
 
 === ☕ Project Loom
->>>>>>> Stashed changes
 
 First and foremost: What is *Project Loom*?
 
@@ -224,11 +193,7 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |🇬🇧 📋
 |===
 
-<<<<<<< Updated upstream
-=== Libraries and tools
-=======
 === ⚒️ Libraries and tools
->>>>>>> Stashed changes
 
 [cols="1,3"]
 .Recommended libraries and tools
@@ -249,11 +214,7 @@ Designed for both development and production time use
 |A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
 |===
 
-<<<<<<< Updated upstream
-=== Books
-=======
 === 📕 Books
->>>>>>> Stashed changes
 
 [cols="6,3,2,1"]
 .Recommended books
@@ -286,11 +247,7 @@ Designed for both development and production time use
 |🇬🇧
 |===
 
-<<<<<<< Updated upstream
-=== Courses
-=======
 === 👩🏻‍🏫 Courses
->>>>>>> Stashed changes
 
 [cols="6,3,2,1"]
 .Recommended courses
@@ -308,17 +265,6 @@ Designed for both development and production time use
 |🇬🇧
 |===
 
-<<<<<<< Updated upstream
-== Who to follow?
-
-=== People
-
-Work in progress...
-
-=== Sites
-
-Work in progress...
-=======
 == 🚶‍♀️ Who to follow?
 
 === 👩🏻‍💻 People
@@ -352,4 +298,3 @@ Work in progress...
 * https://www.baeldung.com/[Baeldung]
 * https://www.infoq.com/reactive-programming/[InfoQ: Reactive Programming]
 * https://dzone.com/[DZone]
->>>>>>> Stashed changes
