@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 = Asyncronous & reactive programming in Java
 
 == Presentation
@@ -11,6 +12,52 @@ Work in progress...
 == Links
 
 === Fundamentals
+=======
+= Asynchronous & reactive programming in Java
+Marcos de la Calle Samaniego, @marcosDLCS
+v0.0.2, 2020-11-10
+:toc:
+
+== 🙋‍♂️ Presentation
+
+This repository is intended to be a compilation of presentations, examples, links, and other resources on asynchronous and reactive programming in Java.
+
+This initiative is part of the final project of: https://www.codeurjc.es/mastercloudapps/[*Máster Cloud Apps. Desarrollo y despliegue de aplicaciones en la nube*] [ 🇪🇸 ]
+
+++++
+<p style="text-align:center">
+<img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" style="height:60px"/>
+<img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" style="height:75px"/>
+</p>
+++++
+
+The project also provides, as documentation, a presentation about asynchronous and reactive programming in Java. You can check the slides here:
+
+[cols="10,2,3,1"]
+|===
+|Name |Version| Updated at| Lang
+
+|Programación asíncrona y reactiva en Java
+|TBD
+|TBD
+|🇪🇸
+
+|Asynchronous and reactive programming in Java
+|TBD
+|TBD
+|🇬🇧
+|===
+
+NOTE: This part is _work in progress_
+
+== 📐 Examples
+
+Work in progress...
+
+== 🔗 Resources
+
+=== 👼🏻 Fundamentals
+>>>>>>> Stashed changes
 
 * https://www.reactivemanifesto.org/[The reactive manifesto]
 * https://12factor.net/[12 Factor App]
@@ -18,13 +65,18 @@ Work in progress...
 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow]
 * https://projectreactor.io/[Project Reactor]
 
+<<<<<<< Updated upstream
 === Main Reactive Streams implementations
+=======
+=== 👨‍👩‍👧‍👦 Main Reactive Streams implementations
+>>>>>>> Stashed changes
 
 * https://projectreactor.io/[Project Reactor]
 * https://github.com/ReactiveX/RxJava[RxJava]
 * https://vertx.io/[VertX]
 * https://doc.akka.io/docs/akka/current/stream/index.html[Akka Streams]
 
+<<<<<<< Updated upstream
 === Spring ecosystem
 
 Work in progress...
@@ -34,6 +86,80 @@ Work in progress...
 Work in progress...
 
 === Project Loom
+=======
+=== 🍀 Spring ecosystem
+
+[cols="6,3,2,1"]
+.Interesting videos and articles about Reactive Spring
+|===
+|Name |Author |Year |Info
+
+|https://www.youtube.com/watch?v=vSHNBgY7MGA&ab_channel=SpringI%2FO[Moving from Imperative to Reactive]
+|Paul Harris
+|2019
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=0rnMIueRKNU&ab_channel=SpringDeveloper[Do’s and Don’ts: Avoiding First-Time Reactive Programmer Mines]
+|Sergei Egorov
+|2019
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=ODzY5uJfzDI&ab_channel=SpringI%2FO[Benefits of reactive programming with Reactor and Spring Boot 2]
+|Violeta Georgieva
+|2019
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=xCu73WVg8Ps&ab_channel=SpringDeveloper[Avoiding Reactor Meltdown]
+|Phil Clay
+|2019
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=pyqIpqCt8PU&ab_channel=vJUG[Reactive Performance]
+|Oleh Dokuka
+|2019
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=qwF6v6FN_Uc&ab_channel=SpringDeveloper[Getting Started with R2DBC]
+|Mark Heckler
+|2018
+|🇬🇧 📹
+
+|https://www.youtube.com/watch?v=ipVfRdl5SP0&ab_channel=SpringDeveloper[The RSocket Revolution]
+|Josh Long
+|2020
+|🇬🇧 📹
+
+|https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription[Flight of the Flux 1 - Assembly vs Subscription]
+|Simon Baslé
+|2019
+|🇬🇧 📋
+
+|https://spring.io/blog/2019/04/16/flight-of-the-flux-2-debugging-caveats[Flight of the Flux 2 - Debugging Caveats]
+|Simon Baslé
+|2019
+|🇬🇧 📋
+
+|https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers[Flight of the Flux 3 - Hopping Threads and Schedulers]
+|Simon Baslé
+|2019
+|🇬🇧 📋
+|===
+
+=== 🌈 Other framework ecosystems
+
+[cols="6,3,2,1"]
+.Interesting videos and articles about other frameworks and ecosystems
+|===
+|Name |Author |Year |Info
+
+|https://www.youtube.com/watch?v=kWlrGtwvOxg&ab_channel=RedHatDeveloper/[Reactive Quarkus–A Java Mutiny]
+|Clement Escoffier
+|2020
+|🇬🇧 📹
+|===
+
+=== ☕ Project Loom
+>>>>>>> Stashed changes
 
 First and foremost: What is *Project Loom*?
 
@@ -98,7 +224,11 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |🇬🇧 📋
 |===
 
+<<<<<<< Updated upstream
 === Libraries and tools
+=======
+=== ⚒️ Libraries and tools
+>>>>>>> Stashed changes
 
 [cols="1,3"]
 .Recommended libraries and tools
@@ -119,7 +249,11 @@ Designed for both development and production time use
 |A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
 |===
 
+<<<<<<< Updated upstream
 === Books
+=======
+=== 📕 Books
+>>>>>>> Stashed changes
 
 [cols="6,3,2,1"]
 .Recommended books
@@ -152,7 +286,11 @@ Designed for both development and production time use
 |🇬🇧
 |===
 
+<<<<<<< Updated upstream
 === Courses
+=======
+=== 👩🏻‍🏫 Courses
+>>>>>>> Stashed changes
 
 [cols="6,3,2,1"]
 .Recommended courses
@@ -170,6 +308,7 @@ Designed for both development and production time use
 |🇬🇧
 |===
 
+<<<<<<< Updated upstream
 == Who to follow?
 
 === People
@@ -179,3 +318,38 @@ Work in progress...
 === Sites
 
 Work in progress...
+=======
+== 🚶‍♀️ Who to follow?
+
+=== 👩🏻‍💻 People
+
+* Simon Baslé, https://twitter.com/simonbasle[@simonbasle]
+* Arnaud Bos, https://twitter.com/arnaud_bos[@arnaud_bos]
+* Oleh Dokuka, https://twitter.com/OlehDokuka[@OlehDokuka]
+* Sergei Egorov, https://twitter.com/bsideup[@bsideup]
+* Clement Escoffier, https://twitter.com/clementplop[@clementplop]
+* Violeta Georgieva, https://twitter.com/violeta_g_g[@violeta_g_g]
+* Mark Heckler, https://twitter.com/mkheck[@mkheck]
+* Josh Long, https://twitter.com/starbuxman[@starbuxman]
+* Audrey Neveu, https://twitter.com/Audrey_Neveu[@Audrey_Neveu]
+* Mark Paluch, https://twitter.com/mp911de[@mp911de]
+* Ron Pressler, https://twitter.com/pressron[@pressron]
+* Dave Syer, https://twitter.com/david_syer[@david_syer]
+* Ben Wilcock, https://twitter.com/benbravo73[@benbravo73]
+
+=== 👮🏻‍♂️ Official accounts
+
+* Akka Team, https://twitter.com/akkateam[@akkateam]
+* Project Reactor, https://twitter.com/ProjectReactor[@ProjectReactor]
+* R2DBC, https://twitter.com/r2dbc[@r2dbc]
+* RSocket, https://twitter.com/RSocketIO[@RSocketIO]
+* RxJava, https://twitter.com/RxJava[@RxJava]
+* Eclipse Vert.x, https://twitter.com/vertx_project[@vertx_project]
+
+=== 🏡 Sites
+
+* https://spring.io/blog/[Spring Blog]
+* https://www.baeldung.com/[Baeldung]
+* https://www.infoq.com/reactive-programming/[InfoQ: Reactive Programming]
+* https://dzone.com/[DZone]
+>>>>>>> Stashed changes
