@@ -9,37 +9,31 @@ This repository is intended to be a compilation of presentations, examples, link
 
 This initiative is part of the final project of: https://www.codeurjc.es/mastercloudapps/[*Máster Cloud Apps. Desarrollo y despliegue de aplicaciones en la nube*] [ 🇪🇸 ]
 
-ifdef::env-github[]
 ++++
 <p align="center">
 <img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" height="60"/>
 <img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" height="75"/>
 </p>
 ++++
-endif::[]
-ifndef::env-github[]
-image::https://www.urjc.es/images/Logos/logo-urjc-negro.png[align="center"]
-image::https://avatars2.githubusercontent.com/u/16519594?s=280&v=4[150,150,align="center"]
-endif::[]
+
+NOTE: This part is _work in progress_
 
 The project also provides, as documentation, a presentation about asynchronous and reactive programming in Java. You can check the slides here:
 
-[cols="10,2,3,1"]
+[cols="10,3,3,1"]
 |===
 |Name |Version| Updated at| Lang
 
-|Programación asíncrona y reactiva en Java
-|TBD
-|TBD
+|https://drive.google.com/file/d/1mRa4TvJI7TVM3R423PzDLCpq_bqLcyWy/view?usp=sharing[Programación asíncrona y reactiva en Java]
+|0.0.1-SNAPSHOT
+|2020-11-10
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
-|TBD
-|TBD
+| Soon...
+| Soon...
 |🇬🇧
 |===
-
-NOTE: This part is _work in progress_
 
 == 📐 Examples
 
