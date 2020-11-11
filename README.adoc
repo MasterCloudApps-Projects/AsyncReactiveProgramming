@@ -3,7 +3,11 @@ Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
 v0.0.3, 2020-11-11
 :toc:
 
-image::resources/img/a_r_p_j_logo.png[Async and reactive Java,400,align="center"]
+++++
+<p align="center">
+<img src="resources/img/a_r_p_j_logo.png" height="200"/>
+</p>
+++++
 
 ---
 
@@ -15,8 +19,8 @@ This initiative is part of the final project of: https://www.codeurjc.es/masterc
 
 ++++
 <p align="center">
-<img src="resources/img/u_logo.png" height="80"/>
-<img src="resources/img/c_u_logo.png" height="80"/>
+<img src="resources/img/u_logo.png" height="120"/>
+<img src="resources/img/c_u_logo.png" height="120"/>
 </p>
 ++++
 
