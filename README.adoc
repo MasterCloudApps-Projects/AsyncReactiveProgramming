@@ -5,7 +5,7 @@ v0.0.3, 2020-11-11
 
 ++++
 <p align="center">
-<img src="resources/img/a_r_p_j_logo.png" height="200"/>
+<img src="resources/img/a_r_p_j_logo.png" height="160"/>
 </p>
 ++++
 
@@ -48,7 +48,7 @@ This section lists a series of examples that are intended to guide the content o
 Each of the mentioned examples are based on the latest version of *Java (15+)* and *Spring Boot (2.4+)*. 
 *Maven* or *Gradle* will be used as build/dependency management tool.
 
-* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/examples/01-basic-comparison/[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
 == 🔗 Resources
 
