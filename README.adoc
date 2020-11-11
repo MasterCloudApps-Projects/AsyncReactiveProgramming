@@ -1,7 +1,15 @@
 = Asynchronous & reactive programming in Java
-Marcos de la Calle Samaniego, @marcosDLCS
-v0.0.2, 2020-11-10
+Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
+v0.0.3, 2020-11-11
 :toc:
+
+++++
+<p align="center">
+<img src="resources/img/a_r_p_j_logo.png" height="200"/>
+</p>
+++++
+
+---
 
 == 🙋‍♂️ Presentation
 
@@ -11,12 +19,10 @@ This initiative is part of the final project of: https://www.codeurjc.es/masterc
 
 ++++
 <p align="center">
-<img src="https://www.urjc.es/images/Logos/logo-urjc-negro.png" height="60"/>
-<img src="https://avatars2.githubusercontent.com/u/16519594?s=280&v=4" height="75"/>
+<img src="resources/img/u_logo.png" height="120"/>
+<img src="resources/img/c_u_logo.png" height="120"/>
 </p>
 ++++
-
-NOTE: This part is _work in progress_
 
 The project also provides, as documentation, a presentation about asynchronous and reactive programming in Java. You can check the slides here:
 
@@ -24,20 +30,25 @@ The project also provides, as documentation, a presentation about asynchronous a
 |===
 |Name |Version| Updated at| Lang
 
-|https://drive.google.com/file/d/1mRa4TvJI7TVM3R423PzDLCpq_bqLcyWy/view?usp=sharing[Programación asíncrona y reactiva en Java]
-|0.0.1-SNAPSHOT
-|2020-11-10
+|https://drive.google.com/file/d/17xGgTH3Pg5l6MPaJPgTXJbnzCN-cxbif/view?usp=sharing[Programación asíncrona y reactiva en Java]
+|0.0.2-SNAPSHOT
+|2020-11-11
 |🇪🇸
 
-|Asynchronous and reactive programming in Java
-| Soon...
-| Soon...
+|https://drive.google.com/file/d/1og4xkiSfrIQ07onmlAsAJx-ZV6y84H3Y/view?usp=sharing[Asynchronous and reactive programming in Java]
+|0.0.1-SNAPSHOT
+|2020-11-11
 |🇬🇧
 |===
 
 == 📐 Examples
 
-Work in progress...
+This section lists a series of examples that are intended to guide the content of the presentation.
+
+Each of the mentioned examples are based on the latest version of *Java (15+)* and *Spring Boot (2.4+)*. 
+*Maven* or *Gradle* will be used as build/dependency management tool.
+
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/examples/01-basic-comparison/[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
 == 🔗 Resources
 
@@ -111,6 +122,11 @@ Work in progress...
 |https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers[Flight of the Flux 3 - Hopping Threads and Schedulers]
 |Simon Baslé
 |2019
+|🇬🇧 📋
+
+|https://projectreactor.io/docs/core/release/reference/#which-operator[Project Reactor: Which operator do I need? (Appendix A)]
+|Project Reactor Docs
+| -
 |🇬🇧 📋
 |===
 
@@ -190,11 +206,16 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |Arnaud Bos
 |2020
 |🇬🇧 📋
+
+|https://paluch.biz/blog/182-experimenting-with-project-loom-eap-and-spring-webmvc.html[Experimenting with Project Loom EAP and Spring WebMVC]
+|Mark Paluch
+|2020
+|🇬🇧 📋
 |===
 
 === ⚒️ Libraries and tools
 
-[cols="1,3"]
+[cols="2,5"]
 .Recommended libraries and tools
 |===
 |Name |Description
@@ -211,6 +232,9 @@ Designed for both development and production time use
 
 |https://github.com/reactor/reactor-core/tree/master/reactor-tools[Reactor Tools]
 |A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
+
+|https://github.com/reactor/reactor-core/tree/master/reactor-tools[Rx Marbles]
+|A webapp for experimenting with diagrams of Rx Observables, for learning purposes
 |===
 
 === 📕 Books
@@ -223,6 +247,11 @@ Designed for both development and production time use
 |https://www.goodreads.com/book/show/21799444-reactive-design-patterns[Reactive Design Patterns]
 |Roland Kuhn, Jamie Allen
 |2014
+|🇬🇧
+
+|https://www.goodreads.com/book/show/23752020-reactive-application-development[Reactive Application Development]
+|Sean Walsh, Duncan K. DeVore, Brian Hanafee
+|2018
 |🇬🇧
 
 |https://www.goodreads.com/book/show/28321006-reactive-programming-with-rxjava[Reactive Programming with RxJava: Creating Asynchronous, Event-Based Applications]
@@ -297,3 +326,7 @@ Designed for both development and production time use
 * https://www.baeldung.com/[Baeldung]
 * https://www.infoq.com/reactive-programming/[InfoQ: Reactive Programming]
 * https://dzone.com/[DZone]
+
+== 🤝 Credits
+
+* Coffee-love https://thenounproject.com/term/coffee-lover/1949347/[icon] by https://thenounproject.com/[The Noun Project] ☕ ❤️ 
