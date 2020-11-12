@@ -45,8 +45,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 This section lists a series of examples that are intended to guide the content of the presentation.
 
-Each of the mentioned examples are based on the latest version of *Java (15+)* and *Spring Boot (2.4+)*. 
-*Maven* or *Gradle* will be used as build/dependency management tool.
+Each of the mentioned examples are based on the latest version of *Java (15+)* and https://spring.io/projects/spring-boot[*Spring Boot (2.4+)*].
+
+https://maven.apache.org/[*Maven (3.6+)*] or https://gradle.org/[*Gradle (6+)*] will be used as build/dependency management tool. In addition, some examples will use the https://projectlombok.org/[*Lombok*] library to generate code through annotations
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
@@ -69,15 +70,31 @@ Each of the mentioned examples are based on the latest version of *Java (15+)* a
 
 === 🍀 Spring ecosystem
 
+It seems obvious but the best place to find good information about the Spring ecosystem is its official documentation:
+
+* https://docs.spring.io/spring-framework/docs/current/reference/html[Spring Framework Docs]
+* https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle[Spring Boot Docs]
+* https://projectreactor.io/docs/core/release/reference[Project Reactor Docs]
+
 [cols="6,3,2,1"]
 .Interesting videos and articles about Reactive Spring
 |===
 |Name |Author |Year |Info
 
+|https://www.infoq.com/presentations/spring-reactive-webflux[Guide to "Reactive" for Spring MVC Developers]
+|Rossen Stoyanchev
+|2018
+|🇬🇧 📹
+
 |https://www.youtube.com/watch?v=vSHNBgY7MGA&ab_channel=SpringI%2FO[Moving from Imperative to Reactive]
 |Paul Harris
 |2019
 |🇬🇧 📹
+
+|https://hazelcast.com/blog/migrating-from-imperative-to-reactive[Migrating from Imperative to Reactive]
+|Nicholas Frankel
+|2020
+|🇬🇧 📋
 
 |https://www.youtube.com/watch?v=0rnMIueRKNU&ab_channel=SpringDeveloper[Do’s and Don’ts: Avoiding First-Time Reactive Programmer Mines]
 |Sergei Egorov
@@ -302,12 +319,14 @@ Designed for both development and production time use
 * Oleh Dokuka, https://twitter.com/OlehDokuka[@OlehDokuka]
 * Sergei Egorov, https://twitter.com/bsideup[@bsideup]
 * Clement Escoffier, https://twitter.com/clementplop[@clementplop]
+* Nicholas Frankel, https://twitter.com/nicolas_frankel[@nicolas_frankel]
 * Violeta Georgieva, https://twitter.com/violeta_g_g[@violeta_g_g]
 * Mark Heckler, https://twitter.com/mkheck[@mkheck]
 * Josh Long, https://twitter.com/starbuxman[@starbuxman]
 * Audrey Neveu, https://twitter.com/Audrey_Neveu[@Audrey_Neveu]
 * Mark Paluch, https://twitter.com/mp911de[@mp911de]
 * Ron Pressler, https://twitter.com/pressron[@pressron]
+* Rossen Stoyanchev, https://twitter.com/rstoya05[@rstoya05]
 * Dave Syer, https://twitter.com/david_syer[@david_syer]
 * Ben Wilcock, https://twitter.com/benbravo73[@benbravo73]
 
