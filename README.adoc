@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.3, 2020-11-11
+v0.0.3, 2020-11-13
 :toc:
 
 ++++
@@ -30,9 +30,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |===
 |Name |Version| Updated at| Lang
 
-|https://drive.google.com/file/d/17xGgTH3Pg5l6MPaJPgTXJbnzCN-cxbif/view?usp=sharing[Programación asíncrona y reactiva en Java]
-|0.0.2-SNAPSHOT
-|2020-11-11
+|https://drive.google.com/file/d/1Alv4sQuEry4C25vdRscyWwvpUqf-Cvq1/view?usp=sharing[Programación asíncrona y reactiva en Java]
+|0.0.3-SNAPSHOT
+|2020-11-13
 |🇪🇸
 
 |https://drive.google.com/file/d/1og4xkiSfrIQ07onmlAsAJx-ZV6y84H3Y/view?usp=sharing[Asynchronous and reactive programming in Java]
@@ -51,11 +51,23 @@ https://maven.apache.org/[*Maven (3.6+)*] or https://gradle.org/[*Gradle (6+)*] 
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
+* Example 02. *Using the WebClient* 🔒
+
+* Example 03. *Gateway!* 🔒
+
+* Example 04. *Reactive DB access with R2DBC* 🔒
+
+* Example 05. *Protocols. RSocket* 🔒
+
+* Example ??. *Project Loom. Basic* 🔒
+
 == 🔗 Resources
 
 === 👼🏻 Fundamentals
 
+* https://www.reactive.foundation/[Reactive foundation]
 * https://www.reactivemanifesto.org/[The reactive manifesto]
+* https://principles.reactive.foundation/[The reactive principles]
 * https://12factor.net/[12 Factor App]
 * https://www.reactive-streams.org/[Reactive Streams Specification]
 * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow]
