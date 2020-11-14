@@ -1,8 +1,3 @@
-# Read Me First
-The following was discovered as part of building this project:
-
-* The original package name 'es.codeurjc.arpj.mvc-api' is invalid and this project uses 'es.codeurjc.arpj.mvcapi' instead.
-
 # Getting Started
 
 ### Reference Documentation

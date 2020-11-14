@@ -14,7 +14,6 @@ public class UserFinder {
 
     private final UserRepository repository;
 
-
     public List<UserFinderResponse> findAll() {
         return repository.findAll()
                 .stream()
@@ -27,5 +26,4 @@ public class UserFinder {
                 .map(u -> new UserFinderResponse(u.getId(), u.getName(), u.getSurname(), u.getEmailAddress()))
                 .orElse(null);
     }
-
 }

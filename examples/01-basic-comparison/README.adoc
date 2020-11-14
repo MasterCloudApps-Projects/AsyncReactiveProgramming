@@ -1,0 +1,19 @@
+= Example 01. Basic comparison
+
+This example shows a basic comparison of *how to create a simple CRUD API with Spring MVC as with Spring Webflux*.
+
+The basic structure of each project has been generated through:
+
+* https://start.spring.io/[Spring Initializr]
+
+
+Both projects are thought to be executed from the IDE to carry out the necessary tests. An HTTP file with the API calls that can be executed from IntelliJ Idea is included in each one (*users-api.http*).
+
+Docs about IntelliJ HTTP client:
+
+* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor]
+
+== Other useful information
+
+* https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html[Web on Reactive Stack]
+* https://www.baeldung.com/spring-5-functional-web[Introduction to the Functional Web Framework in Spring 5]

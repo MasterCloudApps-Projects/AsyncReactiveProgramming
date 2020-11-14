@@ -26,18 +26,20 @@ This initiative is part of the final project of: https://www.codeurjc.es/masterc
 
 The project also provides, as documentation, a presentation about asynchronous and reactive programming in Java. You can check the slides here:
 
-[cols="10,3,3,1"]
+[cols="10,4,3,3,1"]
 |===
-|Name |Version| Updated at| Lang
+|Name |Version |Download |Updated at | Lang
 
-|https://drive.google.com/file/d/1Alv4sQuEry4C25vdRscyWwvpUqf-Cvq1/view?usp=sharing[Programación asíncrona y reactiva en Java]
-|0.0.3-SNAPSHOT
-|2020-11-13
+|Programación asíncrona y reactiva en Java 
+|0.0.4-SNAPSHOT
+|https://drive.google.com/file/d/18Y-ojhn9OmDYUv0j5gFkfolmpblVcOtb/view?usp=sharing[pptx] or https://drive.google.com/file/d/1js7Yqjh8TtBxW6nIkCaGmwOEwAmZM9Yr/view?usp=sharing[pdf]
+|2020-11-14
 |🇪🇸
 
-|https://drive.google.com/file/d/1og4xkiSfrIQ07onmlAsAJx-ZV6y84H3Y/view?usp=sharing[Asynchronous and reactive programming in Java]
-|0.0.1-SNAPSHOT
-|2020-11-11
+|Asynchronous and reactive programming in Java
+|0.0.2-SNAPSHOT
+|https://drive.google.com/file/d/1e-fpSN5la1nTKSu-Ldvfy2TKt6Vzs62m/view?usp=sharing[pptx] or https://drive.google.com/file/d/17uz563I0JzTpaoNuMHtSj5ogVEJxOMN6/view?usp=sharing[pdf]
+|2020-11-14
 |🇬🇧
 |===
 
