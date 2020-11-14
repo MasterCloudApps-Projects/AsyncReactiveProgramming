@@ -3,7 +3,7 @@ Accept: application/json
 
 ###
 
-GET http://localhost:8080/users/2449bf24-bb7f-4579-bab6-28a49677982a
+GET http://localhost:8080/users/a879d2bc-fe58-4d4f-91f9-05607ea3427b
 Accept: application/json
 
 ###
@@ -14,7 +14,7 @@ Content-Type: application/json
 {
   "id": "{{$uuid}}",
   "name": "Clement",
-  "surname": "Escoffier",
+  "surname": "Escoffier-{{$randomInt}}",
   "email": "clement.escoffier@user.com"
 }
 
@@ -24,15 +24,15 @@ PUT http://localhost:8080/users
 Content-Type: application/json
 
 {
-  "id": "67bd1c27-f768-4aa6-9cba-86da52020704",
+  "id": "a879d2bc-fe58-4d4f-91f9-05607ea3427a",
   "name": "Mr. Clement",
-  "surname": "Escoffier",
+  "surname": "Escoffier-{{$randomInt}}",
   "email": "mr.clement.escoffier@user.com"
 }
 
 ###
 
-DELETE http://localhost:8080/users/feedc0bc-5442-4b33-b0dd-a87060be3c5a
+DELETE http://localhost:8080/users/a879d2bc-fe58-4d4f-91f9-05607ea3427a
 Accept: application/json
 
 ###
