@@ -15,7 +15,7 @@ v0.0.3, 2020-11-13
 
 This repository is intended to be a compilation of presentations, examples, links, and other resources on asynchronous and reactive programming in Java.
 
-This initiative is part of the final project of: https://www.codeurjc.es/mastercloudapps/[*Máster Cloud Apps. Desarrollo y despliegue de aplicaciones en la nube*] [ 🇪🇸 ]
+This initiative is part of the final project of: https://www.codeurjc.es/mastercloudapps/[*Máster Cloud Apps. Desarrollo y despliegue de aplicaciones en la nube*, window=_blank] [ 🇪🇸 ]
 
 ++++
 <p align="center">
@@ -32,13 +32,13 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 |Programación asíncrona y reactiva en Java 
 |0.0.4-SNAPSHOT
-|https://drive.google.com/file/d/18Y-ojhn9OmDYUv0j5gFkfolmpblVcOtb/view?usp=sharing[pptx] or https://drive.google.com/file/d/1js7Yqjh8TtBxW6nIkCaGmwOEwAmZM9Yr/view?usp=sharing[pdf]
+| https://drive.google.com/file/d/18Y-ojhn9OmDYUv0j5gFkfolmpblVcOtb/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1js7Yqjh8TtBxW6nIkCaGmwOEwAmZM9Yr/view?usp=sharing[pdf, window=_blank]
 |2020-11-14
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
 |0.0.2-SNAPSHOT
-|https://drive.google.com/file/d/1e-fpSN5la1nTKSu-Ldvfy2TKt6Vzs62m/view?usp=sharing[pptx] or https://drive.google.com/file/d/17uz563I0JzTpaoNuMHtSj5ogVEJxOMN6/view?usp=sharing[pdf]
+| https://drive.google.com/file/d/1e-fpSN5la1nTKSu-Ldvfy2TKt6Vzs62m/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/17uz563I0JzTpaoNuMHtSj5ogVEJxOMN6/view?usp=sharing[pdf, window=_blank]
 |2020-11-14
 |🇬🇧
 |===
@@ -47,13 +47,13 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 This section lists a series of examples that are intended to guide the content of the presentation.
 
-Each of the mentioned examples are based on the latest version of *Java (15+)* and https://spring.io/projects/spring-boot[*Spring Boot (2.4+)*].
+Each of the mentioned examples are based on the latest version of *Java (15+)* and https://spring.io/projects/spring-boot[*Spring Boot (2.4+)*, window=_blank].
 
-https://maven.apache.org/[*Maven (3.6+)*] or https://gradle.org/[*Gradle (6+)*] will be used as build/dependency management tool. In addition, some examples will use the https://projectlombok.org/[*Lombok*] library to generate code through annotations
+https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[*Gradle (6+)*, window=_blank] will be used as build/dependency management tool. In addition, some examples will use the https://projectlombok.org/[*Lombok*, window=_blank] library to generate code through annotations
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
-* Example 02. *Using the WebClient* 🔒
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from a remote web service using the reactive WebClient
 
 * Example 03. *Gateway!* 🔒
 
@@ -67,95 +67,95 @@ https://maven.apache.org/[*Maven (3.6+)*] or https://gradle.org/[*Gradle (6+)*] 
 
 === 👼🏻 Fundamentals
 
-* https://www.reactive.foundation/[Reactive foundation]
-* https://www.reactivemanifesto.org/[The reactive manifesto]
-* https://principles.reactive.foundation/[The reactive principles]
-* https://12factor.net/[12 Factor App]
-* https://www.reactive-streams.org/[Reactive Streams Specification]
-* https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow]
-* https://projectreactor.io/[Project Reactor]
+* https://www.reactive.foundation/[Reactive foundation, window=_blank]
+* https://www.reactivemanifesto.org/[The reactive manifesto, window=_blank]
+* https://principles.reactive.foundation/[The reactive principles, window=_blank]
+* https://12factor.net/[12 Factor App, window=_blank]
+* https://www.reactive-streams.org/[Reactive Streams Specification, window=_blank]
+* https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/Flow.html[Java 11 Flow, window=_blank]
+* https://projectreactor.io/[Project Reactor, window=_blank]
 
 === 👨‍👩‍👧‍👦 Main Reactive Streams implementations
 
-* https://projectreactor.io/[Project Reactor]
-* https://github.com/ReactiveX/RxJava[RxJava]
-* https://vertx.io/[VertX]
-* https://doc.akka.io/docs/akka/current/stream/index.html[Akka Streams]
+* https://projectreactor.io/[Project Reactor, window=_blank]
+* https://github.com/ReactiveX/RxJava[RxJava, window=_blank]
+* https://vertx.io/[VertX, window=_blank]
+* https://doc.akka.io/docs/akka/current/stream/index.html[Akka Streams, window=_blank]
 
 === 🍀 Spring ecosystem
 
 It seems obvious but the best place to find good information about the Spring ecosystem is its official documentation:
 
-* https://docs.spring.io/spring-framework/docs/current/reference/html[Spring Framework Docs]
-* https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle[Spring Boot Docs]
-* https://projectreactor.io/docs/core/release/reference[Project Reactor Docs]
+* https://docs.spring.io/spring-framework/docs/current/reference/html[Spring Framework Docs, window=_blank]
+* https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle[Spring Boot Docs, window=_blank]
+* https://projectreactor.io/docs/core/release/reference[Project Reactor Docs, window=_blank]
 
 [cols="6,3,2,1"]
 .Interesting videos and articles about Reactive Spring
 |===
 |Name |Author |Year |Info
 
-|https://www.infoq.com/presentations/spring-reactive-webflux[Guide to "Reactive" for Spring MVC Developers]
+| https://www.infoq.com/presentations/spring-reactive-webflux[Guide to "Reactive" for Spring MVC Developers, window=_blank]
 |Rossen Stoyanchev
 |2018
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=vSHNBgY7MGA&ab_channel=SpringI%2FO[Moving from Imperative to Reactive]
+| https://www.youtube.com/watch?v=vSHNBgY7MGA&ab_channel=SpringI%2FO[Moving from Imperative to Reactive, window=_blank]
 |Paul Harris
 |2019
 |🇬🇧 📹
 
-|https://hazelcast.com/blog/migrating-from-imperative-to-reactive[Migrating from Imperative to Reactive]
+| https://hazelcast.com/blog/migrating-from-imperative-to-reactive[Migrating from Imperative to Reactive, window=_blank]
 |Nicholas Frankel
 |2020
 |🇬🇧 📋
 
-|https://www.youtube.com/watch?v=0rnMIueRKNU&ab_channel=SpringDeveloper[Do’s and Don’ts: Avoiding First-Time Reactive Programmer Mines]
+| https://www.youtube.com/watch?v=0rnMIueRKNU&ab_channel=SpringDeveloper[Do’s and Don’ts: Avoiding First-Time Reactive Programmer Mines, window=_blank]
 |Sergei Egorov
 |2019
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=ODzY5uJfzDI&ab_channel=SpringI%2FO[Benefits of reactive programming with Reactor and Spring Boot 2]
+| https://www.youtube.com/watch?v=ODzY5uJfzDI&ab_channel=SpringI%2FO[Benefits of reactive programming with Reactor and Spring Boot 2, window=_blank]
 |Violeta Georgieva
 |2019
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=xCu73WVg8Ps&ab_channel=SpringDeveloper[Avoiding Reactor Meltdown]
+| https://www.youtube.com/watch?v=xCu73WVg8Ps&ab_channel=SpringDeveloper[Avoiding Reactor Meltdown, window=_blank]
 |Phil Clay
 |2019
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=pyqIpqCt8PU&ab_channel=vJUG[Reactive Performance]
+| https://www.youtube.com/watch?v=pyqIpqCt8PU&ab_channel=vJUG[Reactive Performance, window=_blank]
 |Oleh Dokuka
 |2019
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=qwF6v6FN_Uc&ab_channel=SpringDeveloper[Getting Started with R2DBC]
+| https://www.youtube.com/watch?v=qwF6v6FN_Uc&ab_channel=SpringDeveloper[Getting Started with R2DBC, window=_blank]
 |Mark Heckler
 |2018
 |🇬🇧 📹
 
-|https://www.youtube.com/watch?v=ipVfRdl5SP0&ab_channel=SpringDeveloper[The RSocket Revolution]
+| https://www.youtube.com/watch?v=ipVfRdl5SP0&ab_channel=SpringDeveloper[The RSocket Revolution, window=_blank]
 |Josh Long
 |2020
 |🇬🇧 📹
 
-|https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription[Flight of the Flux 1 - Assembly vs Subscription]
+| https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription[Flight of the Flux 1 - Assembly vs Subscription, window=_blank]
 |Simon Baslé
 |2019
 |🇬🇧 📋
 
-|https://spring.io/blog/2019/04/16/flight-of-the-flux-2-debugging-caveats[Flight of the Flux 2 - Debugging Caveats]
+| https://spring.io/blog/2019/04/16/flight-of-the-flux-2-debugging-caveats[Flight of the Flux 2 - Debugging Caveats, window=_blank]
 |Simon Baslé
 |2019
 |🇬🇧 📋
 
-|https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers[Flight of the Flux 3 - Hopping Threads and Schedulers]
+| https://spring.io/blog/2019/12/13/flight-of-the-flux-3-hopping-threads-and-schedulers[Flight of the Flux 3 - Hopping Threads and Schedulers, window=_blank]
 |Simon Baslé
 |2019
 |🇬🇧 📋
 
-|https://projectreactor.io/docs/core/release/reference/#which-operator[Project Reactor: Which operator do I need? (Appendix A)]
+| https://projectreactor.io/docs/core/release/reference/#which-operator[Project Reactor: Which operator do I need? (Appendix A), window=_blank]
 |Project Reactor Docs
 | -
 |🇬🇧 📋
@@ -168,7 +168,7 @@ It seems obvious but the best place to find good information about the Spring ec
 |===
 |Name |Author |Year |Info
 
-|https://www.youtube.com/watch?v=kWlrGtwvOxg&ab_channel=RedHatDeveloper/[Reactive Quarkus–A Java Mutiny]
+| https://www.youtube.com/watch?v=kWlrGtwvOxg&ab_channel=RedHatDeveloper/[Reactive Quarkus–A Java Mutiny, window=_blank]
 |Clement Escoffier
 |2020
 |🇬🇧 📹
@@ -178,7 +178,7 @@ It seems obvious but the best place to find good information about the Spring ec
 
 First and foremost: What is *Project Loom*?
 
-According to https://wiki.openjdk.java.net/display/loom/Main[OpenJDK Wiki]:
+According to https://wiki.openjdk.java.net/display/loom/Main[OpenJDK Wiki, window=_blank]:
 
 ====
 Project Loom is to intended to explore, incubate and deliver Java VM features and APIs built on top of them for the purpose of supporting easy-to-use, high-throughput lightweight concurrency and new programming models on the Java platform. This is accomplished by the addition of the following constructs:
@@ -193,52 +193,52 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |===
 |Name |Author |Year |Info
 
-|https://wiki.openjdk.java.net/display/loom/Main[Loom - OpenJDK Wiki]
+| https://wiki.openjdk.java.net/display/loom/Main[Loom - OpenJDK Wiki, window=_blank]
 | -
 | -
 |🇬🇧
 
-|https://youtu.be/23HjZBOIshY/[Project Loom: Modern Scalable Concurrency for the Java Platform]
+| https://youtu.be/23HjZBOIshY/[Project Loom: Modern Scalable Concurrency for the Java Platform, window=_blank]
 |Ron Pressler
 |2020
 |🇬🇧 📹
 
-|https://inside.java/2020/08/07/loom-performance/[On the performance of user-mode threads and coroutines]
+| https://inside.java/2020/08/07/loom-performance/[On the performance of user-mode threads and coroutines, window=_blank]
 |Ron Pressler
 |2020
 |🇬🇧 📋
 
-|https://blog.frankel.ch/project-loom-reactive-coroutines/[On Project Loom, the Reactive model and coroutines]
+| https://blog.frankel.ch/project-loom-reactive-coroutines/[On Project Loom, the Reactive model and coroutines, window=_blank]
 |Nicholas Frankel
 |2020
 |🇬🇧 📋
 
-|https://i-rant.arnaudbos.com/loom-part-0-rationale/[Loom - Part 0 - Rationale]
+| https://i-rant.arnaudbos.com/loom-part-0-rationale/[Loom - Part 0 - Rationale, window=_blank]
 |Arnaud Bos
 |2019
 |🇬🇧 📋
 
-|https://i-rant.arnaudbos.com/loom-part-1-scheduling/[Loom - Part 1 - It's all about Scheduling]
+| https://i-rant.arnaudbos.com/loom-part-1-scheduling/[Loom - Part 1 - It's all about Scheduling, window=_blank]
 |Arnaud Bos
 |2019
 |🇬🇧 📋
 
-|https://i-rant.arnaudbos.com/loom-part-2-blocking/[Loom - Part 2 - Blocking code]
+| https://i-rant.arnaudbos.com/loom-part-2-blocking/[Loom - Part 2 - Blocking code, window=_blank]
 |Arnaud Bos
 |2019
 |🇬🇧 📋
 
-|https://i-rant.arnaudbos.com/loom-part-3-async/[Loom - Part 3 - Asynchronous code]
+| https://i-rant.arnaudbos.com/loom-part-3-async/[Loom - Part 3 - Asynchronous code, window=_blank]
 |Arnaud Bos
 |2019
 |🇬🇧 📋
 
-|https://i-rant.arnaudbos.com/loom-part-4-nio/[Loom - Part 4 - Non-thread-blocking async I/O]
+| https://i-rant.arnaudbos.com/loom-part-4-nio/[Loom - Part 4 - Non-thread-blocking async I/O, window=_blank]
 |Arnaud Bos
 |2020
 |🇬🇧 📋
 
-|https://paluch.biz/blog/182-experimenting-with-project-loom-eap-and-spring-webmvc.html[Experimenting with Project Loom EAP and Spring WebMVC]
+| https://paluch.biz/blog/182-experimenting-with-project-loom-eap-and-spring-webmvc.html[Experimenting with Project Loom EAP and Spring WebMVC, window=_blank]
 |Mark Paluch
 |2020
 |🇬🇧 📋
@@ -251,20 +251,20 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |===
 |Name |Description
 
-|https://visualvm.github.io/[VisualVM]
+| https://visualvm.github.io/[VisualVM, window=_blank]
 |VisualVM is a visual tool integrating commandline JDK tools and lightweight profiling capabilities.
 Designed for both development and production time use
 
-|http://www.awaitility.org/[Awaitility]
+| http://www.awaitility.org/[Awaitility, window=_blank]
 |Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner
 
-|https://github.com/reactor/BlockHound[BlockHound]
+| https://github.com/reactor/BlockHound[BlockHound, window=_blank]
 |Java agent to detect blocking calls from non-blocking threads
 
-|https://github.com/reactor/reactor-core/tree/master/reactor-tools[Reactor Tools]
+| https://github.com/reactor/reactor-core/tree/master/reactor-tools[Reactor Tools, window=_blank]
 |A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
 
-|https://github.com/reactor/reactor-core/tree/master/reactor-tools[Rx Marbles]
+| https://github.com/reactor/reactor-core/tree/master/reactor-tools[Rx Marbles, window=_blank]
 |A webapp for experimenting with diagrams of Rx Observables, for learning purposes
 |===
 
@@ -275,32 +275,32 @@ Designed for both development and production time use
 |===
 |Name |Author |Year |Lang
 
-|https://www.goodreads.com/book/show/21799444-reactive-design-patterns[Reactive Design Patterns]
+| https://www.goodreads.com/book/show/21799444-reactive-design-patterns[Reactive Design Patterns, window=_blank]
 |Roland Kuhn, Jamie Allen
 |2014
 |🇬🇧
 
-|https://www.goodreads.com/book/show/23752020-reactive-application-development[Reactive Application Development]
+| https://www.goodreads.com/book/show/23752020-reactive-application-development[Reactive Application Development, window=_blank]
 |Sean Walsh, Duncan K. DeVore, Brian Hanafee
 |2018
 |🇬🇧
 
-|https://www.goodreads.com/book/show/28321006-reactive-programming-with-rxjava[Reactive Programming with RxJava: Creating Asynchronous, Event-Based Applications]
+| https://www.goodreads.com/book/show/28321006-reactive-programming-with-rxjava[Reactive Programming with RxJava: Creating Asynchronous, Event-Based Applications, window=_blank]
 |Tomasz Nurkiewicz, Ben Christensen
 |2016
 |🇬🇧
 
-|https://www.goodreads.com/book/show/53722460-hacking-with-spring-boot-2-3[Hacking with Spring Boot 2.3: Reactive Edition]
+| https://www.goodreads.com/book/show/53722460-hacking-with-spring-boot-2-3[Hacking with Spring Boot 2.3: Reactive Edition, window=_blank]
 |Greg L. Turnquist
 |2020
 |🇬🇧
 
-|https://www.goodreads.com/book/show/49450069-reactive-spring[Reactive Spring]
+| https://www.goodreads.com/book/show/49450069-reactive-spring[Reactive Spring, window=_blank]
 |Josh Long
 |2020
 |🇬🇧
 
-|https://www.goodreads.com/book/show/55182022-spring-boot[Spring Boot: Up and Running: Building Cloud Native Java and Kotlin Applications]
+| https://www.goodreads.com/book/show/55182022-spring-boot[Spring Boot: Up and Running: Building Cloud Native Java and Kotlin Applications, window=_blank]
 |Mark Heckler
 |2021
 |🇬🇧
@@ -313,12 +313,12 @@ Designed for both development and production time use
 |===
 |Name |Author |Platform |Lang
 
-|https://learning.oreilly.com/library/view/reactive-spring-boot/9780136836421/[Reactive Spring, 2nd Edition]
+| https://learning.oreilly.com/library/view/reactive-spring-boot/9780136836421/[Reactive Spring, 2nd Edition, window=_blank]
 |Josh Long
 |Oreilly
 |🇬🇧
 
-|https://www.udemy.com/course/efficient-java-multithreading-with-executors/[Efficient Java Multithreading and Concurrency with Executors]
+| https://www.udemy.com/course/efficient-java-multithreading-with-executors/[Efficient Java Multithreading and Concurrency with Executors, window=_blank]
 |Arun Kumar
 |Udemy
 |🇬🇧
@@ -328,38 +328,38 @@ Designed for both development and production time use
 
 === 👩🏻‍💻 People
 
-* Simon Baslé, https://twitter.com/simonbasle[@simonbasle]
-* Arnaud Bos, https://twitter.com/arnaud_bos[@arnaud_bos]
-* Oleh Dokuka, https://twitter.com/OlehDokuka[@OlehDokuka]
-* Sergei Egorov, https://twitter.com/bsideup[@bsideup]
-* Clement Escoffier, https://twitter.com/clementplop[@clementplop]
-* Nicholas Frankel, https://twitter.com/nicolas_frankel[@nicolas_frankel]
-* Violeta Georgieva, https://twitter.com/violeta_g_g[@violeta_g_g]
-* Mark Heckler, https://twitter.com/mkheck[@mkheck]
-* Josh Long, https://twitter.com/starbuxman[@starbuxman]
-* Audrey Neveu, https://twitter.com/Audrey_Neveu[@Audrey_Neveu]
-* Mark Paluch, https://twitter.com/mp911de[@mp911de]
-* Ron Pressler, https://twitter.com/pressron[@pressron]
-* Rossen Stoyanchev, https://twitter.com/rstoya05[@rstoya05]
-* Dave Syer, https://twitter.com/david_syer[@david_syer]
-* Ben Wilcock, https://twitter.com/benbravo73[@benbravo73]
+* Simon Baslé, https://twitter.com/simonbasle[@simonbasle, window=_blank]
+* Arnaud Bos, https://twitter.com/arnaud_bos[@arnaud_bos, window=_blank]
+* Oleh Dokuka, https://twitter.com/OlehDokuka[@OlehDokuka, window=_blank]
+* Sergei Egorov, https://twitter.com/bsideup[@bsideup, window=_blank]
+* Clement Escoffier, https://twitter.com/clementplop[@clementplop, window=_blank]
+* Nicholas Frankel, https://twitter.com/nicolas_frankel[@nicolas_frankel, window=_blank]
+* Violeta Georgieva, https://twitter.com/violeta_g_g[@violeta_g_g, window=_blank]
+* Mark Heckler, https://twitter.com/mkheck[@mkheck, window=_blank]
+* Josh Long, https://twitter.com/starbuxman[@starbuxman, window=_blank]
+* Audrey Neveu, https://twitter.com/Audrey_Neveu[@Audrey_Neveu, window=_blank]
+* Mark Paluch, https://twitter.com/mp911de[@mp911de, window=_blank]
+* Ron Pressler, https://twitter.com/pressron[@pressron, window=_blank]
+* Rossen Stoyanchev, https://twitter.com/rstoya05[@rstoya05, window=_blank]
+* Dave Syer, https://twitter.com/david_syer[@david_syer, window=_blank]
+* Ben Wilcock, https://twitter.com/benbravo73[@benbravo73, window=_blank]
 
 === 👮🏻‍♂️ Official accounts
 
-* Akka Team, https://twitter.com/akkateam[@akkateam]
-* Project Reactor, https://twitter.com/ProjectReactor[@ProjectReactor]
-* R2DBC, https://twitter.com/r2dbc[@r2dbc]
-* RSocket, https://twitter.com/RSocketIO[@RSocketIO]
-* RxJava, https://twitter.com/RxJava[@RxJava]
-* Eclipse Vert.x, https://twitter.com/vertx_project[@vertx_project]
+* Akka Team, https://twitter.com/akkateam[@akkateam, window=_blank]
+* Project Reactor, https://twitter.com/ProjectReactor[@ProjectReactor, window=_blank]
+* R2DBC, https://twitter.com/r2dbc[@r2dbc, window=_blank]
+* RSocket, https://twitter.com/RSocketIO[@RSocketIO, window=_blank]
+* RxJava, https://twitter.com/RxJava[@RxJava, window=_blank]
+* Eclipse Vert.x, https://twitter.com/vertx_project[@vertx_project, window=_blank]
 
 === 🏡 Sites
 
-* https://spring.io/blog/[Spring Blog]
-* https://www.baeldung.com/[Baeldung]
-* https://www.infoq.com/reactive-programming/[InfoQ: Reactive Programming]
-* https://dzone.com/[DZone]
+* https://spring.io/blog/[Spring Blog, window=_blank]
+* https://www.baeldung.com/[Baeldung, window=_blank]
+* https://www.infoq.com/reactive-programming/[InfoQ: Reactive Programming, window=_blank]
+* https://dzone.com/[DZone, window=_blank]
 
 == 🤝 Credits
 
-* Coffee-love https://thenounproject.com/term/coffee-lover/1949347/[icon] by https://thenounproject.com/[The Noun Project] ☕ ❤️ 
+* Coffee-love https://thenounproject.com/term/coffee-lover/1949347/[icon, window=_blank] by https://thenounproject.com/[The Noun Project, window=_blank] ☕ ❤️ 

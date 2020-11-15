@@ -1,15 +1,19 @@
 package es.codeurjc.arpj.mvcapi.infrastructure.http;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class UserRequest {
 
-    private final String id;
+    private String id;
 
-    private final String name;
+    private String name;
 
-    private final String surname;
+    private String surname;
 
-    private final String email;
+    private String email;
 }
