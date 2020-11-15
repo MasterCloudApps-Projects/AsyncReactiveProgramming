@@ -1,19 +1,117 @@
 = Example 01. Basic comparison
+Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
+v1.0.0, 2020-11-15
+:toc:
+
+== ℹ️ About
 
 This example shows a basic comparison of *how to create a simple CRUD API with Spring MVC as with Spring Webflux*.
 
 The basic structure of each project has been generated through:
 
-* https://start.spring.io/[Spring Initializr]
+* https://start.spring.io/[Spring Initializr, window=_blank]
 
+== 📚 Stack
+
+* *Language:* Java 15 (SDKMan + AdoptOpenJDK) 
+* *Framework*: Spring Boot 2.4+ (mvc and webflux)
+* *Test Engine*: JUnit 5
+* *Test Libraries*: AssertJ, RestAssured, JavaFaker
+* *Build and dependency management:* Maven
+* *Other*: Lombok, Actuator
+
+== 💁‍♀️ Useful information
+
+=== ❓ HTTP client
 
 Both projects are thought to be executed from the IDE to carry out the necessary tests. An HTTP file with the API calls that can be executed from IntelliJ Idea is included in each one (*users-api.http*).
 
 Docs about IntelliJ HTTP client:
 
-* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor]
+* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
 
-== Other useful information
+=== ☕ Java 15
 
-* https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html[Web on Reactive Stack]
-* https://www.baeldung.com/spring-5-functional-web[Introduction to the Functional Web Framework in Spring 5]
+The code is based on *Java 15* and uses preview features such as *Records*. 
+
+To setup this behaviour the POMs contain *<argLine>--enable-preview</argLine>*:
+
+.pom.xml
+[source,xml]
+----
+<build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>15</source>
+                <target>15</target>
+                <compilerArgs>--enable-preview</compilerArgs>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <argLine>--enable-preview</argLine>
+            </configuration>
+        </plugin>
+
+    </plugins>
+</build>
+----
+
+A very interesting and practical way to handle different versions of Java is by using the https://sdkman.io/[*SDKMan*] command line utility. Take a look at the links.
+
+=== 🧪 Integration tests
+
+In addition, each of the projects contains an integration test with https://rest-assured.io/[*RestAssured*] that performs the entire call flow:
+
+.Test output (simplifed)
+[source,text]
+----
+-------------------------------------------------------------
+### --> Integration Test: Users. [Create Request] 
+### --> Integration Test: Users. [Create Modified Request] 
+### --> Integration Test: Users. [Post User] 
+### --> Integration Test: Users. [Get All Users] 
+-------------------------------------------------------------
+{
+    "id": "be41536d-d893-4bd8-a96a-39787654644c",
+    "name": "Al K. Seltzer",
+    "surname": "Graceford of Holyhall",
+    "email": "merrilee.heller@gmail.com"
+}
+-------------------------------------------------------------
+### --> Integration Test: Users. [Get User By Id] 
+### --> Integration Test: Users. [Put User (modify)] 
+-------------------------------------------------------------
+{
+    "id": "be41536d-d893-4bd8-a96a-39787654644c",
+    "name": "Doug Love Fitzhugh",
+    "surname": "Shepherd",
+    "email": "genesis.hyatt@yahoo.com"
+}
+-------------------------------------------------------------
+### --> Integration Test: Users. [Get User By Id (modified)] 
+### --> Integration Test: Users. [Delete User] 
+### --> Integration Test: Users. [Get User By Id (not found)] 
+### --> Integration Test: Users. [Get All Users (zero)]
+------------------------------------------------------------- 
+----
+
+== 🦮 Guides
+
+* https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html[Web on Reactive Stack, window=_blank]
+* https://www.baeldung.com/spring-5-functional-web[Introduction to the Functional Web Framework in Spring 5, window=_blank]
+* https://www.baeldung.com/rest-assured-tutorial[A Guide to REST-assured]
+* https://sdkman.io/install[SDKMan Install]
+* https://sdkman.io/usage[SDKMan Usage]
