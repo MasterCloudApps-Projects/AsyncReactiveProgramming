@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.3, 2020-11-13
+v0.0.6, 2020-11-16
 :toc:
 
 ++++
@@ -31,9 +31,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.4-SNAPSHOT
-| https://drive.google.com/file/d/18Y-ojhn9OmDYUv0j5gFkfolmpblVcOtb/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1js7Yqjh8TtBxW6nIkCaGmwOEwAmZM9Yr/view?usp=sharing[pdf, window=_blank]
-|2020-11-14
+|0.0.5-SNAPSHOT
+| https://drive.google.com/file/d/11xLx59f6ZXOi17Taqd2U-Ry1wZRy5Lcl/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1WBcB9sV38dqYpWKsaABP8U9ndVtWaWUp/view?usp=sharing[pdf, window=_blank]
+|2020-11-16
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
@@ -53,7 +53,7 @@ https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
-* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from a remote web service using the reactive WebClient
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/02-using-spring-webclient[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from a remote web service using the reactive WebClient
 
 * Example 03. *Gateway!* 🔒
 
@@ -329,6 +329,7 @@ Designed for both development and production time use
 === 👩🏻‍💻 People
 
 * Simon Baslé, https://twitter.com/simonbasle[@simonbasle, window=_blank]
+* Jonas Bonér, https://twitter.com/jboner[@jboner, window=_blank]
 * Arnaud Bos, https://twitter.com/arnaud_bos[@arnaud_bos, window=_blank]
 * Oleh Dokuka, https://twitter.com/OlehDokuka[@OlehDokuka, window=_blank]
 * Sergei Egorov, https://twitter.com/bsideup[@bsideup, window=_blank]
