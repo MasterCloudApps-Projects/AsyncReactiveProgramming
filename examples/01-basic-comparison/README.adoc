@@ -113,5 +113,6 @@ In addition, each of the projects contains an integration test with https://rest
 * https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html[Web on Reactive Stack, window=_blank]
 * https://www.baeldung.com/spring-5-functional-web[Introduction to the Functional Web Framework in Spring 5, window=_blank]
 * https://www.baeldung.com/rest-assured-tutorial[A Guide to REST-assured]
+* https://www.baeldung.com/java-faker[A Guide to JavaFaker]
 * https://sdkman.io/install[SDKMan Install]
 * https://sdkman.io/usage[SDKMan Usage]

@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.6, 2020-11-16
+v0.0.6, 2020-11-17
 :toc:
 
 ++++
@@ -51,17 +51,19 @@ Each of the mentioned examples are based on the latest version of *Java (15+)* a
 
 https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[*Gradle (6+)*, window=_blank] will be used as build/dependency management tool. In addition, some examples will use the https://projectlombok.org/[*Lombok*, window=_blank] library to generate code through annotations
 
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/00-reactor-operators[Example 00. *Reactor operators*]: Simple project to practice with Project Reactor main operators. The purpose of the example is to show the behavior of Mono, Flux and their possibilities
+
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/02-using-spring-webclient[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from a remote web service using the reactive WebClient
 
-* Example 03. *Gateway!* 🔒
+* Example 03. *Gateway!* 🔒  _(Coming soon...)_
 
-* Example 04. *Reactive DB access with R2DBC* 🔒
+* Example 04. *Reactive DB access with R2DBC* 🔒 _(Coming soon...)_
 
-* Example 05. *Protocols. RSocket* 🔒
+* Example 05. *Protocols. RSocket* 🔒 _(Coming soon...)_
 
-* Example ??. *Project Loom. Basic* 🔒
+* Example ??. *Project Loom. Basic* 🔒 _(Coming soon...)_
 
 == 🔗 Resources
 
@@ -138,6 +140,11 @@ It seems obvious but the best place to find good information about the Spring ec
 | https://www.youtube.com/watch?v=ipVfRdl5SP0&ab_channel=SpringDeveloper[The RSocket Revolution, window=_blank]
 |Josh Long
 |2020
+|🇬🇧 📹
+
+| https://www.youtube.com/watch?v=hfupNIxzNP4&ab_channel=SpringI%2FO[Flight of the Flux: A look at Reactor execution model, window=_blank]
+|Simon Baslé
+|2018
 |🇬🇧 📹
 
 | https://spring.io/blog/2019/03/06/flight-of-the-flux-1-assembly-vs-subscription[Flight of the Flux 1 - Assembly vs Subscription, window=_blank]
@@ -263,6 +270,9 @@ Designed for both development and production time use
 
 | https://github.com/reactor/reactor-core/tree/master/reactor-tools[Reactor Tools, window=_blank]
 |A set of tools to improve Project Reactor's debugging and development experience. Starting from Reactor 3.3.0.M2, reactor-tools is now moved to reactor-core
+
+| https://github.com/reactor/reactor-addons[Reactor Addons, window=_blank]
+|Reactor-adapter and reactor-extras utils
 
 | https://github.com/reactor/reactor-core/tree/master/reactor-tools[Rx Marbles, window=_blank]
 |A webapp for experimenting with diagrams of Rx Observables, for learning purposes

@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'es.codeurjc.arpj'
+version '0.0.1-SNAPSHOT'
+sourceCompatibility = '15'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform('io.projectreactor:reactor-bom:2020.0.1')
+    implementation 'io.projectreactor:reactor-core'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'io.projectreactor:reactor-test'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+}
+
+test {
+    useJUnitPlatform()
+}
