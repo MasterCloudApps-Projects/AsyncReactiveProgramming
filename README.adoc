@@ -31,15 +31,15 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.5-SNAPSHOT
+|0.0.6-SNAPSHOT
 | https://drive.google.com/file/d/11xLx59f6ZXOi17Taqd2U-Ry1wZRy5Lcl/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1WBcB9sV38dqYpWKsaABP8U9ndVtWaWUp/view?usp=sharing[pdf, window=_blank]
-|2020-11-16
+|2020-11-18
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
-|0.0.2-SNAPSHOT
-| https://drive.google.com/file/d/1e-fpSN5la1nTKSu-Ldvfy2TKt6Vzs62m/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/17uz563I0JzTpaoNuMHtSj5ogVEJxOMN6/view?usp=sharing[pdf, window=_blank]
-|2020-11-14
+|0.0.3-SNAPSHOT
+| https://drive.google.com/file/d/1WB3MRs_JzdaTTS3bS8W6ZslofpToamx_/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/14J8DoHBFlxCZA25b9sFPvdMNhxDwkuOY/view?usp=sharing[pdf, window=_blank]
+|2020-11-18
 |🇬🇧
 |===
 
@@ -261,6 +261,9 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 | https://visualvm.github.io/[VisualVM, window=_blank]
 |VisualVM is a visual tool integrating commandline JDK tools and lightweight profiling capabilities.
 Designed for both development and production time use
+
+| https://github.com/openjdk/jmc[Java Mission Control, window=_blank]
+|Mission Control is an open source production time profiling and diagnostics tool for Java
 
 | http://www.awaitility.org/[Awaitility, window=_blank]
 |Awaitility is a DSL that allows you to express expectations of an asynchronous system in a concise and easy to read manner
