@@ -32,13 +32,13 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 |Programación asíncrona y reactiva en Java 
 |0.0.6-SNAPSHOT
-| https://drive.google.com/file/d/11xLx59f6ZXOi17Taqd2U-Ry1wZRy5Lcl/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1WBcB9sV38dqYpWKsaABP8U9ndVtWaWUp/view?usp=sharing[pdf, window=_blank]
+| https://drive.google.com/file/d/1WB3MRs_JzdaTTS3bS8W6ZslofpToamx_/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/14J8DoHBFlxCZA25b9sFPvdMNhxDwkuOY/view?usp=sharing[pdf, window=_blank]
 |2020-11-18
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
 |0.0.3-SNAPSHOT
-| https://drive.google.com/file/d/1WB3MRs_JzdaTTS3bS8W6ZslofpToamx_/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/14J8DoHBFlxCZA25b9sFPvdMNhxDwkuOY/view?usp=sharing[pdf, window=_blank]
+| https://drive.google.com/file/d/1vfMmL__LiVgOm2fLsEiZVVHBcqgiD4Ez/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/11zZQBMAHh0cgV2gVhK-6L5KEZ4i9-hSv/view?usp=sharing[pdf, window=_blank]
 |2020-11-18
 |🇬🇧
 |===
