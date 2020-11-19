@@ -1,9 +1,25 @@
 = Example 02. Using the Spring WebClient
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.1, 2020-11-15
+v1.0.0, 2020-11-19
 :toc:
 
 == ℹ️ About
+
+Basic API to retrieve information from remote web services using the **reactive WebClient**.
+
+* *Characters:* one endpoint to get a random Character and another one that returns a stream of Character Server-Sent Events
+* *Animals:* simple endpoints to get a random cat, dog or fox and another one that 'zips' the 3 calls in one
+
+The basic structure of each project has been generated through:
+
+* https://start.spring.io/[Spring Initializr, window=_blank]
+
+Used APIs:
+
+* https://rickandmortyapi.com/[The Rick and Morty API]
+* https://aws.random.cat/meow[Random Cat API]
+* https://random.dog/woof.json[Random Dog API]
+* https://randomfox.ca/floof/[Random Fox API]
 
 == 📚 Stack
 
@@ -16,6 +32,67 @@ v0.0.1, 2020-11-15
 
 == 💁‍♀️ Useful information
 
+=== ❓ HTTP client
+
+CAUTION: IntelliJ Http Client does not manage Server Sent Events really well, use other client like Chrome or https://httpie.io/[*HTTPie*] instead
+
+Both projects are thought to be executed from the IDE to carry out the necessary tests. An HTTP file with the API calls that can be executed from IntelliJ Idea is included in each one (*characters-api.http* and *animals-api.http*).
+
+Docs about IntelliJ HTTP client:
+
+* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
+
+=== 🧪 Integration tests
+
+In addition, the project contains integration tests with https://rest-assured.io/[*RestAssured*] and *WebTestClient* that performs the calls:
+
+.Test output - Amimals (simplifed)
+[source,text]
+----
+### --> Integration Test: Animals. [Get a random cat] 
+{
+    "cat": "https://purr.objects-us-east-1.dream.io/i/5MOlO.jpg"
+}
+Elapsed time: 1114 ms.
+
+### --> Integration Test: Animals. [Get a random dog] 
+{
+    "dog": "https://random.dog/cdfe24b3-8ba8-44b1-a5f4-4174936dabb6.jpg"
+}
+AnimalTest    : Elapsed time: 503 ms.
+
+### --> Integration Test: Animals. [Get a random fox] 
+{
+    "fox": "https://randomfox.ca/images/29.jpg"
+}
+AnimalTest    : Elapsed time: 510 ms.
+
+### --> Integration Test: Animals. [Get a random animal group] 
+{
+    "cat": "https://purr.objects-us-east-1.dream.io/i/TNf3B.jpg",
+    "dog": "https://random.dog/9cca9278-507e-4214-9343-284b7d0fa414.mp4",
+    "fox": "https://randomfox.ca/images/116.jpg"
+}
+AnimalTest    : Elapsed time: 625 ms.
+----
+
+.Test output - Characters (simplifed)
+[source,text]
+----
+### --> Integration Test: Characters. [Get a random character] 
+{
+    "id": 175,
+    "name": "Jerry Smith",
+    "status": "ALIVE",
+    "species": "Human",
+    "image": "https://rickandmortyapi.com/api/character/avatar/175.jpeg"
+}
+----
+
 == 🦮 Guides
 
+* https://developer.mozilla.org/es/docs/Server-sent_events[MDN Server-Sent Events]
+* https://github.com/public-apis/public-apis[Public APIs repository]
 * https://www.baeldung.com/java-faker[A Guide to JavaFaker]
+* https://www.baeldung.com/spring-5-webclient[Spring 5 WebClient]
+* https://www.baeldung.com/spring-webclient-simultaneous-calls[Simultaneous Spring WebClient Calls]

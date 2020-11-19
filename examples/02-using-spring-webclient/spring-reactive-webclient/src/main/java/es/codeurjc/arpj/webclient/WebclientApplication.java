@@ -8,8 +8,11 @@ import reactor.blockhound.BlockHound;
 public class WebclientApplication {
 
     public static void main(String[] args) {
-        BlockHound.install();
+
+        BlockHound.builder()
+                .allowBlockingCallsInside("java.io.FileInputStream", "readBytes")
+                .install();
+
         SpringApplication.run(WebclientApplication.class, args);
     }
-
 }

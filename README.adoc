@@ -55,9 +55,9 @@ https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]: Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
 
-* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/02-using-spring-webclient[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from a remote web service using the reactive WebClient
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/02-using-spring-webclient[Example 02. *Using Spring WebClient*]: Basic API to retrieve information from remote web services using the reactive WebClient
 
-* Example 03. *Gateway!* 🔒  _(Coming soon...)_
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/03-gateway[Example 03. *Gateway!*]: Gateway service to route requests to worker services to practice with Spring Cloud Gateway project
 
 * Example 04. *Reactive DB access with R2DBC* 🔒 _(Coming soon...)_
 
