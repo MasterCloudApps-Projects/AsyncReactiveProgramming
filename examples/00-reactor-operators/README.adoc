@@ -5,7 +5,6 @@ v1.0.0, 2020-11-17
 
 == ℹ️ About
 
-
 This project contains tests to demonstrate *the use of Mono, Flux and their main operators*, as well as the use of utilities such as *StepVerifier* and *TestPublisher*.
 
 The basic structure of each project has been generated through *IntelliJ Idea Gradle porject generator*.

@@ -1,0 +1,19 @@
+GET http://localhost:8080/cats/random
+Accept: application/json
+
+###
+
+GET http://localhost:8080/dogs/random
+Accept: application/json
+
+###
+
+GET http://localhost:8080/foxes/random
+Accept: application/json
+
+###
+
+GET http://localhost:8080/animals/random
+Accept: application/json
+
+###
