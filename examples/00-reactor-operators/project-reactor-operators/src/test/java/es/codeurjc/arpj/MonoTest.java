@@ -11,6 +11,8 @@ import java.time.Duration;
 import java.util.Optional;
 import java.util.Random;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class MonoTest {
 
     private static final Faker FAKER = new Faker();
@@ -83,14 +85,15 @@ class MonoTest {
 
         StepVerifier
                 .create(neverMono)
-                .expectTimeout(Duration.ofSeconds(2)).verify();
+                .expectTimeout(Duration.ofSeconds(2))
+                .verify();
     }
 
     @Test
-    @DisplayName("Test 04: Error")
+    @DisplayName("Test 04: Mono Error")
     void mono_error() {
 
-        System.out.println("Test 04: Error");
+        System.out.println("Test 04: Mono Error");
         System.out.println("=======================================================================================\n");
 
         final Mono<Object> errorMono = Mono.error(new Exception()).log();
@@ -165,7 +168,7 @@ class MonoTest {
 
     @Test
     @DisplayName("Test 08: First and or")
-    void mono_first_and() {
+    void mono_first_and_or() {
 
         final Random random = new Random();
 
@@ -194,5 +197,95 @@ class MonoTest {
                 .create(secondRace)
                 .expectNextCount(1)
                 .verifyComplete();
+    }
+
+    @Test
+    @DisplayName("Test 09: Then")
+    void mono_then() {
+
+        final Random random = new Random();
+
+        System.out.println("Test 09: Then");
+        System.out.println("=======================================================================================\n");
+
+        final Mono<Void> character = Mono.just(FAKER.dragonBall().character()).log()
+                .delayElement(Duration.ofSeconds(2))
+                .then().doFinally(c -> System.out.println("Kamehamehaaaa!!!"));
+
+        StepVerifier
+                .create(character)
+                .expectComplete()
+                .verify();
+
+        final Mono<String> team = Mono.just(FAKER.dragonBall().character()).log()
+                .delayElement(Duration.ofSeconds(1))
+                .doOnNext(c1 -> System.out.println(c1 + " has died!!! We need another hero!!!"))
+                .then(Mono.just(FAKER.dragonBall().character())).log().delayElement(Duration.ofSeconds(1))
+                .doOnNext(c2 -> System.out.println(c2 + " has come!!! We are saved!!!"));
+
+        StepVerifier
+                .create(team)
+                .expectNextCount(1)
+                .verifyComplete();
+
+        final Mono<String> power = Mono.just(FAKER.dragonBall().character()).log()
+                .delayElement(Duration.ofSeconds(2))
+                .doOnNext(c1 -> System.out.println("Hi! I'm ... " + c1))
+                .thenReturn("Oh my god! It's over " + random.nextInt(10) * 1000 + "!!!")
+                .doOnNext(System.out::println);
+
+        StepVerifier
+                .create(power)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+
+    @Test
+    @DisplayName("Test 10: On Error")
+    void mono_on_error() {
+
+        System.out.println("Test 10: On Error");
+        System.out.println("=======================================================================================\n");
+
+        final Mono<Object> expertise = Mono.just(FAKER.programmingLanguage().name()).log()
+                .delayElement(Duration.ofSeconds(1))
+                .doOnNext(p1 -> System.out.println("We are " + p1 + " experts!!"))
+                .then(Mono.error(Exception::new))
+                .onErrorReturn(FAKER.programmingLanguage().name())
+                .doOnNext(p2 -> System.out.println("But the ACTUAL experience... " + p2));
+
+        StepVerifier
+                .create(expertise)
+                .expectNextCount(1)
+                .verifyComplete();
+
+        final Mono<Object> monolith = Mono.just(FAKER.programmingLanguage().name()).log()
+                .delayElement(Duration.ofSeconds(1))
+                .doOnNext(p1 -> System.out.println("Everything is fine with our monolith written in... " + p1 + "!!!"))
+                .then(Mono.error(Exception::new))
+                .onErrorResume(e -> Mono.just(FAKER.programmingLanguage().name()))
+                .doOnNext(p2 ->
+                        System.out.println("Oh no!!! An error!!! Let's rewrite the entire codebase in... " + p2));
+
+        StepVerifier
+                .create(monolith)
+                .expectNextCount(1)
+                .verifyComplete();
+    }
+
+    @Test
+    @DisplayName("Test 11: Block")
+    void mono_block() {
+
+        System.out.println("Test 11: Block");
+        System.out.println("=======================================================================================\n");
+
+        final String medicine = Mono.just(FAKER.medical().medicineName()).log()
+                .doOnNext(m -> System.out.println("Starting an expensive operation. Synthesizing..." + m))
+                .delayElement(Duration.ofSeconds(5))
+                .doOnNext(e -> System.out.println("The operation is complete!!!"))
+                .block();
+
+        assertThat(medicine).isNotBlank();
     }
 }
