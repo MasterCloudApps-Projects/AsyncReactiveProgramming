@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
+import reactor.util.function.Tuple2;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -69,6 +70,36 @@ class FluxTest {
         StepVerifier
                 .create(dragonFlux)
                 .expectNextCount(3)
+                .expectComplete()
+                .verify();
+    }
+
+
+    @Test
+    @DisplayName("Test 03: Flux transform")
+    void flux_transform() {
+
+        System.out.println("Test 03: Flux transform");
+        System.out.println("=======================================================================================\n");
+
+        final String[] strings = {"one", "two", "three", "four", "five"};
+        final Flux<Integer> mapToLength = Flux.fromArray(strings).log().map(String::length).cast(Integer.class).log();
+
+        StepVerifier
+                .create(mapToLength)
+                .expectNext(3)
+                .expectNext(3)
+                .expectNext(5)
+                .expectNext(4)
+                .expectNext(4)
+                .expectComplete()
+                .verify();
+
+        final Flux<Long> mapToIndex = Flux.fromArray(strings).log().index().map(Tuple2::getT1).log();
+
+        StepVerifier
+                .create(mapToIndex)
+                .expectNext(0L, 1L, 2L, 3L, 4L)
                 .expectComplete()
                 .verify();
     }
