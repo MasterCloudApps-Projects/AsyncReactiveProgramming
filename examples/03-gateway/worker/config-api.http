@@ -1,0 +1,4 @@
+GET http://localhost:62486/service-instances/worker-service
+Accept: application/json
+
+###

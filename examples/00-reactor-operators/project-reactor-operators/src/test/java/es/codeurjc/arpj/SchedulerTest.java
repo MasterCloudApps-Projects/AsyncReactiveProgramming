@@ -37,35 +37,7 @@ class SchedulerTest {
                 .expectComplete()
                 .verify();
 
-        printSectionLine();
-
-        final Mono<String> myMono1 = Mono.just(FAKER.company().name())
-                .delayElement(Duration.ofSeconds(random.nextInt(5)))
-                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
-
-        final Mono<String> myMono2 = Mono.just(FAKER.company().name())
-                .delayElement(Duration.ofSeconds(random.nextInt(5)))
-                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
-
-        final Mono<String> myMono3 = Mono.just(FAKER.company().name())
-                .delayElement(Duration.ofSeconds(random.nextInt(5)))
-                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
-
-        final Mono<String> myMono4 = Mono.just(FAKER.company().name())
-                .delayElement(Duration.ofSeconds(random.nextInt(5)))
-                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
-
-        final Mono<String> myZipMono = Mono.zip(myMono1, myMono2, myMono3, myMono4)
-                .map(z -> "Companies: " + z.getT1() + " / " + z.getT2() + " / " + z.getT3() + " / " + z.getT4())
-                .doFinally(System.out::println);
-
-        StepVerifier
-                .create(myZipMono)
-                .expectNextCount(1)
-                .expectComplete()
-                .verify();
-
-        printSectionLine();
+        /* [...] */
 
         final Scheduler myScheduler = Schedulers.newParallel("my-own-scheduler", 4);
 

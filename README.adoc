@@ -31,9 +31,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.7-SNAPSHOT
-| https://drive.google.com/file/d/11ktXhwVvWYnQTgHdmgKnT5UaZLGR-qba/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/11MewvhhIz4v1WtHHQa30_aZeL4iMadLV/view?usp=sharing[pdf, window=_blank]
-|2020-11-20
+|0.0.8-SNAPSHOT
+| https://drive.google.com/file/d/1R2PqYFegie19t8Qa8m4-Ku8od_LdkUEe/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1JoI0SN9mxWVpOgZHTNIqWVTXZDLO-FhN/view?usp=sharing[pdf, window=_blank]
+|2020-11-22
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
@@ -350,6 +350,7 @@ Designed for both development and production time use
 * Nicholas Frankel, https://twitter.com/nicolas_frankel[@nicolas_frankel, window=_blank]
 * Violeta Georgieva, https://twitter.com/violeta_g_g[@violeta_g_g, window=_blank]
 * Mark Heckler, https://twitter.com/mkheck[@mkheck, window=_blank]
+* David Karnok, https://twitter.com/akarnokd[@akarnokd, window=_blank]
 * Josh Long, https://twitter.com/starbuxman[@starbuxman, window=_blank]
 * Audrey Neveu, https://twitter.com/Audrey_Neveu[@Audrey_Neveu, window=_blank]
 * Mark Paluch, https://twitter.com/mp911de[@mp911de, window=_blank]
