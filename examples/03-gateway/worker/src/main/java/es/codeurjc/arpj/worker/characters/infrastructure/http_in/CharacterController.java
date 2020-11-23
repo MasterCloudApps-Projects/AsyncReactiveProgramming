@@ -18,8 +18,10 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 @RequiredArgsConstructor
 public class CharacterController {
 
-    private static final String CHARACTERS_PATH      = "/characters/random";
-    private static final String CHARACTERS_LIST_PATH = "/characters/random-list";
+    private static final String CHARACTERS_PATH        = "/characters/random";
+    private static final String CHARACTERS_PATH_DELAY  = "/characters/random/with-delay";
+    private static final String CHARACTERS_PATH_ERRORS = "/characters/random/with-errors";
+    private static final String CHARACTERS_LIST_PATH   = "/characters/random-list";
 
     private final CharacterRandomizer randomizer;
 
@@ -30,6 +32,14 @@ public class CharacterController {
 
                 .GET(CHARACTERS_PATH,
                         req -> ok().body(randomizer.random().map(CharacterController::toHttpResponse),
+                                CharacterHttpResponse.class))
+
+                .GET(CHARACTERS_PATH_DELAY,
+                        req -> ok().body(randomizer.randomWithDelay().map(CharacterController::toHttpResponse),
+                                CharacterHttpResponse.class))
+
+                .GET(CHARACTERS_PATH_ERRORS,
+                        req -> ok().body(randomizer.randomWithError().map(CharacterController::toHttpResponse),
                                 CharacterHttpResponse.class))
 
                 .GET(CHARACTERS_LIST_PATH,

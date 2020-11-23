@@ -1,4 +1,14 @@
-GET http://localhost:8080/characters/random
+GET http://localhost:56861/characters/random
+Accept: application/json
+
+###
+
+GET http://localhost:56861/characters/random/with-delay
+Accept: application/json
+
+###
+
+GET http://localhost:56861/characters/random/with-errors
 Accept: application/json
 
 ###

@@ -1,0 +1,14 @@
+GET http://localhost:8080/random-character
+Accept: application/json
+
+###
+
+GET http://localhost:8080/random-character-delay
+Accept: application/json
+
+###
+
+GET http://localhost:8080/random-character-error
+Accept: application/json
+
+###
