@@ -1,4 +1,92 @@
 = Example 03. Gateway!
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.1, 2020-11-19
+v1.0.0, 2020-11-23
 :toc:
+
+== ℹ️ About
+
+In addition to the use of reactive libraries, it is also necessary to design our applications following these principles.
+
+Certain reactive patterns such as *location transparency*, *automatic retries*, *circuit breaker* can help us make our application more resilient.
+
+There are 3 modules:
+
+* Gateway (1)
+* Service Discovery (1)
+* Worker (1...N)
+
+++++
+<p align="center">
+<img src="resources/img/d.png" height="300"/>
+</p>
+++++
+
+The endpoints:
+
+* GET http://localhost:8080/random-character: Gets a random character
+
+* GET http://localhost:8080/random-character-delay: Gets a random character with a random delay in each call
+
+* GET http://localhost:8080/random-character-error: Gets a random character but the final endpoint has a 50% error rate. The gateway performs max 3 retries
+
+== 📚 Stack
+
+* *Language:* Java 15 (SDKMan + AdoptOpenJDK) 
+* *Framework*: Spring Boot 2.4+
+* *Libraries*: Spring Cloud Gateway, Eureka client/server
+* *Test Engine*: JUnit 5
+* *Test Libraries*: AssertJ, RestAssured, JavaFaker
+* *Build and dependency management:* Gradle and Maven
+* *Other*: Lombok, Actuator
+
+== 💁‍♀️ Useful information
+
+=== 🚀 How to launch the project?
+
+* First of all: *Java 15* installed
+
+* Do it once (in different consoles)
+
+[source,shell]
+----
+$ cd service-discovery
+
+$ ./mvnw spring-boot:run
+----
+
+[source,shell]
+----
+$ cd spring-cloud-gateway
+
+$ ./mvnw spring-boot:run
+----
+
+* Do as many times as you want (in different consoles)
+
+[source,shell]
+----
+$ cd worker
+
+$ ./gradlew bootRun
+----
+
+* Then you can visit the Eureka Console at http://localhost:8761/
+
+++++
+<p align="center">
+<img src="resources/img/e.png" height="300"/>
+</p>
+++++
+
+* After the endpoints invocation you can check useful information in the console
+
+++++
+<p align="center">
+<img src="resources/img/c.png" height="300"/>
+</p>
+++++
+
+== 🦮 Guides
+
+* https://www.manning.com/books/reactive-design-patterns[Reactive Design Patterns]
+* https://spring.io/guides/gs/service-registration-and-discovery/[Service Registration and Discovery]

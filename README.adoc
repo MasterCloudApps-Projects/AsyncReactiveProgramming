@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.8, 2020-11-20
+v0.0.10, 2020-11-23
 :toc:
 
 ++++
@@ -59,7 +59,7 @@ https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/03-gateway[Example 03. *Gateway!*]: Gateway service to route requests to worker services to practice with Spring Cloud Gateway project
 
-* Example 04. *Reactive DB access with R2DBC* 🔒 _(Coming soon...)_
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/04-reactive-db-access-with-r2dbc[Example 04. *Reactive DB access with R2DBC*]: Simple API with an internal relational PostgreSQL repository. R2DBC provides reactive non-blocking APIs to relationa databases
 
 * Example 05. *Protocols. RSocket* 🔒 _(Coming soon...)_
 
