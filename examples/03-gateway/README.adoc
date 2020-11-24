@@ -1,6 +1,6 @@
 = Example 03. Gateway!
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-11-23
+v1.0.0, 2020-11-24
 :toc:
 
 == ℹ️ About
@@ -17,7 +17,7 @@ There are 3 modules:
 
 ++++
 <p align="center">
-<img src="resources/img/d.png" height="300"/>
+<img src="resources/img/d.png" height="375"/>
 </p>
 ++++
 
@@ -74,15 +74,21 @@ $ ./gradlew bootRun
 
 ++++
 <p align="center">
-<img src="resources/img/e.png" height="300"/>
+<img src="resources/img/e.png"/>
 </p>
 ++++
 
-* After the endpoints invocation you can check useful information in the console
+* After each endpoint invocation you can check useful information in the *worker* standard output
 
 ++++
 <p align="center">
-<img src="resources/img/c.png" height="300"/>
+<img src="resources/img/h.png"/>
+</p>
+++++
+
+++++
+<p align="center">
+<img src="resources/img/c.png"/>
 </p>
 ++++
 

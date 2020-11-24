@@ -9,11 +9,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 class WorkerApplicationTests {
 
-	private static final Faker FAKER = new Faker();
+    private static final Faker FAKER = new Faker();
 
-	@Test
-	void contextLoads() {
-		final var text = FAKER.lorem().paragraph();
-		assertThat(text).isNotBlank();
-	}
+    @Test
+    void contextLoads() {
+        final var text = FAKER.lorem().paragraph();
+        assertThat(text).isNotBlank();
+    }
 }

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.publisher.ParallelFlux;
 import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 import reactor.test.StepVerifier;
@@ -37,7 +38,35 @@ class SchedulerTest {
                 .expectComplete()
                 .verify();
 
-        /* [...] */
+        printSectionLine();
+
+        final Mono<String> myMono1 = Mono.just(FAKER.company().name())
+                .delayElement(Duration.ofSeconds(random.nextInt(5)))
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        final Mono<String> myMono2 = Mono.just(FAKER.company().name())
+                .delayElement(Duration.ofSeconds(random.nextInt(5)))
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        final Mono<String> myMono3 = Mono.just(FAKER.company().name())
+                .delayElement(Duration.ofSeconds(random.nextInt(5)))
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        final Mono<String> myMono4 = Mono.just(FAKER.company().name())
+                .delayElement(Duration.ofSeconds(random.nextInt(5)))
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        final Mono<String> myZipMono = Mono.zip(myMono1, myMono2, myMono3, myMono4)
+                .map(z -> "Companies: " + z.getT1() + " / " + z.getT2() + " / " + z.getT3() + " / " + z.getT4())
+                .doOnNext(System.out::println);
+
+        StepVerifier
+                .create(myZipMono)
+                .expectNextCount(1)
+                .expectComplete()
+                .verify();
+
+        printSectionLine();
 
         final Scheduler myScheduler = Schedulers.newParallel("my-own-scheduler", 4);
 
@@ -51,6 +80,99 @@ class SchedulerTest {
 
         StepVerifier
                 .create(myFlux)
+                .expectNextCount(5)
+                .expectComplete()
+                .verify();
+    }
+
+    @Test
+    @DisplayName("Test 02: Bounded elastic. Basic")
+    void bounded_elastic_scheduler_test_1() {
+
+        System.out.println("Test 02: Bounded elastic. Basic");
+        printTestLine();
+
+        final Scheduler myBoundedElastic = Schedulers.newBoundedElastic(5, 5, "my-bounded-elastic");
+
+        final ParallelFlux<Integer> myFlux = Flux.range(0, 3)
+                .parallel()
+                .runOn(myBoundedElastic)
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        StepVerifier
+                .create(myFlux)
+                .expectNextCount(3)
+                .expectComplete()
+                .verify();
+
+        printSectionLine();
+
+        final ParallelFlux<Integer> myFlux2 = Flux.range(0, 7)
+                .parallel()
+                .runOn(myBoundedElastic)
+                .doOnNext(e -> System.out.println(e + " - " + Thread.currentThread().getName()));
+
+        StepVerifier
+                .create(myFlux2)
+                .expectNextCount(7)
+                .expectComplete()
+                .verify();
+    }
+
+    @Test
+    @DisplayName("Test 03: Bounded elastic. TTL expiration")
+    void bounded_elastic_scheduler_test_3() throws InterruptedException {
+
+        final Random random = new Random();
+
+        System.out.println("Test 03: Bounded elastic. TTL expiration");
+        printTestLine();
+
+        System.out.println("""
+                In this section we create a new bounded elastic scheduler with a short TTL.
+                                
+                After the execution of myFlux4, we force the scheduler TTL expiration through a Thread.sleep()
+                """);
+
+        final Scheduler myBoundedElastic3 = Schedulers.newBoundedElastic(5, 5, "my-bounded-elastic-III", 3);
+
+        final ParallelFlux<Integer> myFlux4 =
+                Flux.range(0, 5)
+                        .parallel()
+                        .runOn(myBoundedElastic3)
+                        .doOnNext(e -> {
+                            try {
+                                Thread.sleep(random.nextInt(10) * 50);
+                            } catch (InterruptedException interruptedException) {
+                                interruptedException.printStackTrace();
+                            }
+                            System.out.println(e + " - " + Thread.currentThread().getName());
+                        });
+
+        StepVerifier
+                .create(myFlux4)
+                .expectNextCount(5)
+                .expectComplete()
+                .verify();
+
+        System.out.println("\nWaiting...\n");
+        Thread.sleep(6000);
+
+        final ParallelFlux<Integer> myFlux5 =
+                Flux.range(0, 5)
+                        .parallel()
+                        .runOn(myBoundedElastic3)
+                        .doOnNext(e -> {
+                            try {
+                                Thread.sleep(random.nextInt(10) * 50);
+                            } catch (InterruptedException interruptedException) {
+                                interruptedException.printStackTrace();
+                            }
+                            System.out.println(e + " - " + Thread.currentThread().getName());
+                        });
+
+        StepVerifier
+                .create(myFlux5)
                 .expectNextCount(5)
                 .expectComplete()
                 .verify();

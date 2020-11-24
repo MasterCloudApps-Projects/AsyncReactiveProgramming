@@ -13,10 +13,10 @@ public class Character {
     private final String image;
 
     private Character(final Builder builder) {
-        this.name = builder.name;
-        this.id = builder.id;
-        this.status = builder.status;
-        this.image = builder.image;
+        this.name    = builder.name;
+        this.id      = builder.id;
+        this.status  = builder.status;
+        this.image   = builder.image;
         this.species = builder.species;
     }
 
@@ -26,11 +26,11 @@ public class Character {
 
     public static final class Builder {
 
-        private CharacterId id;
-        private String name;
+        private CharacterId     id;
+        private String          name;
         private CharacterStatus status;
-        private String species;
-        private String image;
+        private String          species;
+        private String          image;
 
         private Builder() {
             // Builder

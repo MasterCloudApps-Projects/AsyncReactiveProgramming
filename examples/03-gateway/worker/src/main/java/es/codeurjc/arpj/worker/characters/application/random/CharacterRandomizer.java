@@ -1,10 +1,10 @@
 package es.codeurjc.arpj.worker.characters.application.random;
 
 
+import com.netflix.appinfo.EurekaInstanceConfig;
 import es.codeurjc.arpj.worker.characters.domain.Character;
 import es.codeurjc.arpj.worker.characters.domain.CharacterRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -18,24 +18,24 @@ public class CharacterRandomizer {
 
     private static final Random RANDOM = new Random();
 
-    private final CharacterRepository repository;
-    private final String              instance;
+    private final CharacterRepository  repository;
+    private final EurekaInstanceConfig eurekaInstance;
 
     public CharacterRandomizer(final CharacterRepository repository,
-                               @Value("${eureka.instance.instanceId}") final String instance) {
-        this.repository = repository;
-        this.instance   = instance;
+                               final EurekaInstanceConfig eurekaInstance) {
+        this.repository     = repository;
+        this.eurekaInstance = eurekaInstance;
     }
 
     public Mono<CharacterRandomizerResponse> random() {
-        log.info("### -> Instance=[{}]. Without delay. Regular endpoint: random", instance);
+        log.info("### -> Instance=[{}]. Without delay. Regular endpoint: random", eurekaInstance.getInstanceId());
         return repository.random().map(CharacterRandomizer::toRandomizerResponse);
     }
 
     public Mono<CharacterRandomizerResponse> randomWithDelay() {
 
         final long delay = RANDOM.nextInt(10) * 100L;
-        log.info("### -> Instance=[{}]. Delay in milliseconds: {}", instance, delay);
+        log.info("### -> Instance=[{}]. Delay in milliseconds: {}", eurekaInstance.getInstanceId(), delay);
 
         return repository.random()
                 .delayElement(Duration.ofMillis(delay))
@@ -45,7 +45,7 @@ public class CharacterRandomizer {
     public Mono<CharacterRandomizerResponse> randomWithError() {
 
         final boolean err = RANDOM.nextInt(10) > 5;
-        log.info("### -> Instance=[{}]. Generated error: {}", instance, err);
+        log.info("### -> Instance=[{}]. Generated error: {}", eurekaInstance.getInstanceId(), err);
 
         return (err) ? Mono.error(Exception::new) : repository.random().map(CharacterRandomizer::toRandomizerResponse);
     }
