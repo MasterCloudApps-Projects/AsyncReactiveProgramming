@@ -177,4 +177,70 @@ class SchedulerTest {
                 .expectComplete()
                 .verify();
     }
+
+    @Test
+    @DisplayName("Test 04: Immediate")
+    void immediate_test() {
+
+        System.out.println("Test 04: Immediate");
+        printTestLine();
+
+        final Flux<Integer> myFlux = Flux.range(0, 10)
+                .publishOn(Schedulers.immediate())
+                .doOnNext(i -> System.out.println(i + " - " + Thread.currentThread().getName()));
+
+        StepVerifier
+                .create(myFlux)
+                .expectNextCount(10)
+                .verifyComplete();
+
+        printSectionLine();
+
+        final Flux<Integer> myFlux2 = Flux.range(0, 10)
+                .publishOn(Schedulers.newParallel("my-parallel"))
+                .doOnNext(i -> System.out.println(i + " - " + Thread.currentThread().getName()))
+                .publishOn(Schedulers.newParallel("my-second-parallel"))
+                .publishOn(Schedulers.immediate())
+                .doOnNext(i -> System.out.println(i + " - " + Thread.currentThread().getName()));
+
+        StepVerifier
+                .create(myFlux2)
+                .expectNextCount(10)
+                .verifyComplete();
+    }
+
+    @Test
+    @DisplayName("Test 05: Single")
+    void single_test() throws InterruptedException {
+
+        System.out.println("Test 05: Single");
+        printTestLine();
+
+        final Flux<Integer> myFlux = Flux.range(0, 10)
+                .publishOn(Schedulers.newSingle("my-single"))
+                .doOnNext(i -> System.out.println(i + " - " + Thread.currentThread().getName()));
+
+        StepVerifier
+                .create(myFlux)
+                .expectNextCount(10)
+                .verifyComplete();
+
+        printSectionLine();
+
+        Flux.range(0, 10)
+                .publishOn(Schedulers.newSingle("my-second-single"))
+                .doOnNext(i -> {
+                    try {
+                        Thread.sleep(500);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println(i + " - " + Thread.currentThread().getName());
+                }).subscribe();
+
+
+        Thread.sleep(2500);
+        System.out.println("Hey! - " + Thread.currentThread().getName());
+        Thread.sleep(5000);
+    }
 }
