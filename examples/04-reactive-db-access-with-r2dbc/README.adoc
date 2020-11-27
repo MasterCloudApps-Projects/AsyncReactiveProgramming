@@ -2,3 +2,20 @@
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
 v0.0.1, 2020-11-23
 :toc:
+
+== ℹ️ About
+
+
+== 📚 Stack
+
+* *Language:* Java 15 (SDKMan + AdoptOpenJDK) 
+* *Framework*: Spring Boot 2.4+
+* *Libraries*: Starter Data R2DBC, R2DBC-postgresql
+* *Test Engine*: JUnit 5
+* *Test Libraries*: AssertJ, RestAssured, JavaFaker
+* *Build and dependency management:* Gradle
+* *Other*: Lombok, Actuator
+
+== 💁‍♀️ Useful information
+
+=== 🚀 How to launch the project?
