@@ -1,0 +1,54 @@
+GET http://localhost:8080/astronauts
+Accept: application/json
+
+###
+
+GET http://localhost:8080/astronauts/358
+Accept: application/json
+
+###
+
+GET http://localhost:8080/astronauts/random
+Accept: application/json
+
+###
+
+DELETE http://localhost:8080/astronauts/250
+Accept: application/json
+
+###
+
+POST http://localhost:8080/astronauts
+Content-Type: application/json
+
+{
+  "name": "Marcos de la Calle",
+  "status": "A",
+  "birthPlace": "Valladolid, ES",
+  "gender": "M",
+  "spaceFlights": 15,
+  "spaceWalks": 100,
+  "missions": "All"
+}
+
+###
+
+PUT http://localhost:8080/astronauts
+Content-Type: application/json
+
+{
+  "id": 358,
+  "name": "Santiago Garrido",
+  "status": "A",
+  "birthPlace": "Guadalajara, ES",
+  "gender": "M",
+  "spaceFlights": 15,
+  "spaceWalks": 44,
+  "missions": "All"
+}
+
+
+
+
+
+
