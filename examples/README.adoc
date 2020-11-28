@@ -1,0 +1,124 @@
+= Examples
+Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
+v1.0.0, 2020-11-28
+:toc:
+
+== 🗒 List of examples
+
+[cols="1,2"]
+|===
+|Name |Description
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/00-reactor-operators[Example 00. *Reactor operators*]
+| Simple project to practice with Project Reactor main operators. The purpose of the example is to show the behavior of Mono, Flux and their possibilities
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/01-basic-comparison[Example 01. *Basic comparison*]
+| Basic CRUD API (GET, POST, PUT, DELETE) in two flavors, Spring MVC and Spring WebFlux
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/02-using-spring-webclient[Example 02. *Using Spring WebClient*]
+| Basic API to retrieve information from remote web services using the reactive WebClient
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/03-gateway[Example 03. *Gateway!*]
+| Gateway service to route requests to worker services to practice with Spring Cloud Gateway project
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/04-reactive-db-access-with-r2dbc[Example 04. *Reactive DB access with R2DBC*]
+| Simple API with an internal relational PostgreSQL repository. R2DBC provides reactive non-blocking APIs to relational databases
+
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/05-rsocket[Example 05. *Protocols. RSocket*]
+| A simple project to know thow the reactive binary protocol RSocket works. The example includes two small modules that communicate with each other, exploring the different possibilities that RSocket offers to us
+
+| Example 06. *Project Loom. Basic* 
+|🔒 _(Coming soon...)_
+|===
+
+== 💁‍♀️ Useful information
+
+=== 💡 IntelliJ Idea
+
+The examples have been made with the help of the *IntelliJ Idea IDE*.
+
+IntelliJ Idea is the most famous integrated development environment for Java and you can find it in two versions, a community version and a commercial version:
+
+* https://www.jetbrains.com/idea/[IntelliJ IDEA (by Jetbrains)]
+
+This software is likely to be referenced at some point in the documentation or resources for the examples.
+
+=== ☕ Java 15+... Download & manage
+
+The code is based on *Java 15* and uses preview features such as *Records*. If you want to know the evolution of Java features from 8 to 15+, please check the *Guides* section.
+
+If you want to download a version of Java and you don't know where:
+
+* https://adoptopenjdk.net/[AdoptOpenJDK - Prebuilt OpenJDK Binaries for Free!]
+
+A HIGHLY recommended tool for downloading and managing multiple JDKs is *SDKMan*. You can consult more information in the *Guides* section.
+
+
+=== ☕ Java 15+... Maven & Gradle
+
+To setup this behaviour the *Maven* POMs contain *<argLine>--enable-preview</argLine>*:
+
+.pom.xml
+[source,xml]
+----
+<build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>15</source>
+                <target>15</target>
+                <compilerArgs>--enable-preview</compilerArgs>
+            </configuration>
+        </plugin>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+                <argLine>--enable-preview</argLine>
+            </configuration>
+        </plugin>
+
+    </plugins>
+</build>
+----
+
+With Gradle you can add this:
+
+.build.gradle
+[source,groovy]
+----
+tasks.withType(JavaCompile).all {
+    options.compilerArgs += ['--enable-preview']
+}
+
+tasks.withType(Test).all {
+    jvmArgs += '--enable-preview'
+}
+
+tasks.withType(JavaExec) {
+    jvmArgs += '--enable-preview'
+}
+----
+
+=== 💡 HTTP Client
+
+Most examples have an API to query. For this, in each project that requires it, a file with the definition of the API has been incorporated to be executed in the HTTP client of IntelliJ IDEA.
+
+Also some examples include screenshots of a console HTTP client called *HTTPie*.
+
+== 🦮 Guides
+
+* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
+* https://advancedweb.hu/new-language-features-since-java-8-to-15/[New language features since Java 8 to 15]
+* https://sdkman.io/install[SDKMan Install]
+* https://sdkman.io/usage[SDKMan Usage]
+* https://httpie.io/[HTTPie – command-line HTTP client for the API era]

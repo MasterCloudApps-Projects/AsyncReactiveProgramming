@@ -1,6 +1,6 @@
 = Example 00. Project Reactor operators
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-11-17
+v1.0.0, 2020-11-28
 :toc:
 
 == ℹ️ About
@@ -16,6 +16,14 @@ The basic structure of each project has been generated through *IntelliJ Idea Gr
 * *Test Engine*: JUnit 5
 * *Test Libraries*: Reactor test, JavaFaker
 * *Build and dependency management:* Gradle
+
+== 💁‍♀️ Useful information
+
+=== 🚀 How to launch the project?
+
+The project is designed to be executed from your integrated development environment.
+
+It is a collection of tests created to know the different operators and how they can be combined.
 
 == 🦮 Guides
 

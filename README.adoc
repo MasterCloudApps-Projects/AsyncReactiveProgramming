@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.10, 2020-11-23
+v0.0.11, 2020-11-28
 :toc:
 
 ++++
@@ -19,8 +19,9 @@ This initiative is part of the final project of: https://www.codeurjc.es/masterc
 
 ++++
 <p align="center">
-<img src="resources/img/u_logo.png" height="120"/>
-<img src="resources/img/c_u_logo.png" height="120"/>
+<img src="resources/img/c_a_m_logo.png" height="140"/>
+<img src="resources/img/c_u_logo.png" height="140"/>
+<img src="resources/img/u_logo.png" height="140"/>
 </p>
 ++++
 

@@ -1,6 +1,6 @@
 = Example 02. Using the Spring WebClient
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-11-19
+v1.0.0, 2020-11-28
 :toc:
 
 == ℹ️ About
@@ -32,15 +32,15 @@ Used APIs:
 
 == 💁‍♀️ Useful information
 
-=== ❓ HTTP client
+=== 🚀 How to launch the project?
+
+The project is designed to be executed from your integrated development environment.
+
+=== 🏹 HTTP Endpoints
 
 CAUTION: IntelliJ Http Client does not manage Server Sent Events really well, use other client like Chrome or https://httpie.io/[*HTTPie*] instead
 
 Both projects are thought to be executed from the IDE to carry out the necessary tests. An HTTP file with the API calls that can be executed from IntelliJ Idea is included in each one (*characters-api.http* and *animals-api.http*).
-
-Docs about IntelliJ HTTP client:
-
-* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
 
 === 🧪 Integration tests
 
