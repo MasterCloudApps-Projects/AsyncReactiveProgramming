@@ -10,3 +10,9 @@ v0.0.1, 2020-11-28
 == 💁‍♀️ Useful information
 
 == 🦮 Guides
+
+* https://rsocket.io/[RSocket - Application protocol providing Reactive Streams semantics]
+* https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#rsocket[Spring Docs - RSocket]
+* https://github.com/rsocket/rsocket-java[RSocket Java]
+* https://www.baeldung.com/rsocket[Introduccion to RSocket]
+* https://www.baeldung.com/spring-boot-rsocket[RSocket Using Spring Boot]

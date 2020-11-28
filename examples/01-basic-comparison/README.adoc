@@ -1,6 +1,6 @@
 = Example 01. Basic comparison
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-11-15
+v1.0.0, 2020-11-28
 :toc:
 
 == ℹ️ About
@@ -22,54 +22,13 @@ The basic structure of each project has been generated through:
 
 == 💁‍♀️ Useful information
 
-=== ❓ HTTP client
+=== 🚀 How to launch the project?
+
+The project is designed to be executed from your integrated development environment.
+
+=== 🏹 HTTP Endpoints
 
 Both projects are thought to be executed from the IDE to carry out the necessary tests. An HTTP file with the API calls that can be executed from IntelliJ Idea is included in each one (*users-api.http*).
-
-Docs about IntelliJ HTTP client:
-
-* https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
-
-=== ☕ Java 15
-
-The code is based on *Java 15* and uses preview features such as *Records*. 
-
-To setup this behaviour the POMs contain *<argLine>--enable-preview</argLine>*:
-
-.pom.xml
-[source,xml]
-----
-<build>
-    <plugins>
-
-        <plugin>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
-
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <configuration>
-                <source>15</source>
-                <target>15</target>
-                <compilerArgs>--enable-preview</compilerArgs>
-            </configuration>
-        </plugin>
-
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-                <argLine>--enable-preview</argLine>
-            </configuration>
-        </plugin>
-
-    </plugins>
-</build>
-----
-
-A very interesting and practical way to handle different versions of Java is by using the https://sdkman.io/[*SDKMan*] command line utility. Take a look at the links.
 
 === 🧪 Integration tests
 
@@ -114,5 +73,3 @@ In addition, each of the projects contains an integration test with https://rest
 * https://www.baeldung.com/spring-5-functional-web[Introduction to the Functional Web Framework in Spring 5, window=_blank]
 * https://www.baeldung.com/rest-assured-tutorial[A Guide to REST-assured]
 * https://www.baeldung.com/java-faker[A Guide to JavaFaker]
-* https://sdkman.io/install[SDKMan Install]
-* https://sdkman.io/usage[SDKMan Usage]

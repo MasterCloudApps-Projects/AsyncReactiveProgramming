@@ -5,7 +5,7 @@ v1.0.0, 2020-11-28
 
 == ℹ️ About
 
-This example shows the use of *R2DBC* library for reactive access to a relational database (in our case, Postgres)
+This example shows the use of *R2DBC* library for reactive access to a relational database (in our case, Postgres).
 
 It is a small API to perform the typical CRUD operations, in this case with astronauts as a domain model.
 
@@ -41,9 +41,9 @@ spring.r2dbc.username=arpj04
 spring.r2dbc.password=arpj04
 ----
 
-Be careful and change your *database, username and password* name in the *spring.r2dbc.url* property.
+Be careful and change your *database, username and password* name in the *spring.r2dbc.** properties.
 
-=== 🏹 Endpoints
+=== 🏹 HTTP Endpoints
 
 The project contains a *astronauts-api.http* file to run the calls from IntelliJ Idea.
 
@@ -72,7 +72,6 @@ curl -X POST --location "http://localhost:8080/astronauts" -H "Content-Type: app
           \"missions\": \"All\"
         }"
 
-
 curl -X PUT --location "http://localhost:8080/astronauts" -H "Content-Type: application/json" \
     -d "{
           \"id\": 358,
@@ -84,6 +83,25 @@ curl -X PUT --location "http://localhost:8080/astronauts" -H "Content-Type: appl
           \"spaceWalks\": 44,
           \"missions\": \"All\"
         }"
+----
+
+=== 🧪 Integration tests
+
+In addition, the project contains integration tests with https://rest-assured.io/[*RestAssured*]:
+
+.Test output - Astronauts (simplifed)
+[source,text]
+----
+Started AstronautIntegrationTest in 3.931 seconds (JVM running for 5.549)
+### --> Integration Test: Astronauts. Get all astronauts... 
+### --> Integration Test: Astronauts. Save astronaut... 
+AstronautHttpResponse(id=365, name=Helena Hanbaskett, status=Active, birthPlace=Port-au-Prince, gender=Female, spaceFlights=26, spaceWalks=93, missions=Losgar)
+### --> Integration Test: Astronauts. Get astronaut by id... 
+AstronautHttpResponse(id=365, name=Helena Hanbaskett, status=Active, birthPlace=Port-au-Prince, gender=Female, spaceFlights=26, spaceWalks=93, missions=Losgar)
+### --> Integration Test: Astronauts. Update astronaut... 
+### --> Integration Test: Astronauts. Get astronaut by id... 
+AstronautHttpResponse(id=365, name=Val Veeta, status=Deceased, birthPlace=Tallinn, gender=Female, spaceFlights=21, spaceWalks=21, missions=Greenway)
+### --> Integration Test: Astronauts. Delete astronaut... 
 ----
 
 == 🦮 Guides
