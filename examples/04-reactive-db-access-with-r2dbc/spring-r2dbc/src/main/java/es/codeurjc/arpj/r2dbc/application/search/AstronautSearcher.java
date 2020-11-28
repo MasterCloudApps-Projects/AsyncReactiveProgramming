@@ -1,34 +1,25 @@
-package es.codeurjc.arpj.r2dbc.application.find;
+package es.codeurjc.arpj.r2dbc.application.search;
 
 import es.codeurjc.arpj.r2dbc.domain.Astronaut;
-import es.codeurjc.arpj.r2dbc.domain.AstronautId;
+import es.codeurjc.arpj.r2dbc.domain.AstronautCriteria;
 import es.codeurjc.arpj.r2dbc.domain.AstronautRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @Service
 @RequiredArgsConstructor
-public class AstronautFinder {
+public class AstronautSearcher {
 
     private final AstronautRepository repository;
 
-    public Flux<AstronautFinderResponse> findAll() {
-        return repository.findAll().map(AstronautFinder::toResponse);
+    public Flux<AstronautSearcherResponse> search(final AstronautSearchCommand command) {
+        return repository.filter(new AstronautCriteria(command.name())).map(AstronautSearcher::toResponse);
     }
 
-    public Mono<AstronautFinderResponse> findById(final Long id) {
-        return repository.findById(new AstronautId(id)).map(AstronautFinder::toResponse);
-    }
+    private static AstronautSearcherResponse toResponse(final Astronaut astronaut) {
 
-    public Mono<AstronautFinderResponse> random() {
-        return repository.random().map(AstronautFinder::toResponse);
-    }
-
-    private static AstronautFinderResponse toResponse(final Astronaut astronaut) {
-
-        return AstronautFinderResponse.builder()
+        return AstronautSearcherResponse.builder()
                 .id(astronaut.getId())
                 .name(astronaut.getName())
                 .status(astronaut.getStatus() != null ? astronaut.getStatus().getName() : "Unknown")

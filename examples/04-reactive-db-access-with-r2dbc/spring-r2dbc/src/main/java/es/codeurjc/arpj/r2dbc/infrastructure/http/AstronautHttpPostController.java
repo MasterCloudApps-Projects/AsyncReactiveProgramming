@@ -44,16 +44,17 @@ public class AstronautHttpPostController {
 
     private static AstronautHttpResponse toHttpResponse(final AstronautCreatorResponse response) {
 
-        return AstronautHttpResponse.builder()
-                .id(response.getId())
-                .name(response.getName())
-                .status(response.getStatus())
-                .birthPlace(response.getBirthPlace())
-                .gender(response.getGender())
-                .spaceFlights(response.getSpaceFlights())
-                .spaceWalks(response.getSpaceWalks())
-                .missions(response.getMissions())
-                .build();
-    }
+        final var httpResponse = new AstronautHttpResponse();
 
+        httpResponse.setId(response.getId());
+        httpResponse.setName(response.getName());
+        httpResponse.setStatus(response.getStatus());
+        httpResponse.setBirthPlace(response.getBirthPlace());
+        httpResponse.setGender(response.getGender());
+        httpResponse.setSpaceFlights(response.getSpaceFlights());
+        httpResponse.setSpaceWalks(response.getSpaceWalks());
+        httpResponse.setMissions(response.getMissions());
+
+        return httpResponse;
+    }
 }

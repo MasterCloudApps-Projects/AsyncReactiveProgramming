@@ -1,6 +1,7 @@
 package es.codeurjc.arpj.r2dbc.infrastructure.persistence;
 
 import es.codeurjc.arpj.r2dbc.domain.Astronaut;
+import es.codeurjc.arpj.r2dbc.domain.AstronautCriteria;
 import es.codeurjc.arpj.r2dbc.domain.AstronautId;
 import es.codeurjc.arpj.r2dbc.domain.AstronautRepository;
 import lombok.RequiredArgsConstructor;
@@ -52,7 +53,14 @@ public class PostgresAstronautRepository implements AstronautRepository {
     }
 
     @Override
-    public Mono<Void> update(Astronaut astronaut) {
+    public Mono<Void> update(final Astronaut astronaut) {
         return reactiveRepository.save(AstronautEntityMapper.domainToEntity(astronaut)).then();
+    }
+
+    @Override
+    public Flux<Astronaut> filter(final AstronautCriteria criteria) {
+        return reactiveRepository
+                .findAllByNameContaining(criteria.getName())
+                .map(AstronautEntityMapper::entityToDomain);
     }
 }

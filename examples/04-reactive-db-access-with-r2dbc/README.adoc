@@ -1,16 +1,21 @@
 = Example 04. Reactive DB access with R2DBC
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.1, 2020-11-23
+v1.0.0, 2020-11-28
 :toc:
 
 == ℹ️ About
 
+This example shows the use of *R2DBC* library for reactive access to a relational database (in our case, Postgres)
+
+It is a small API to perform the typical CRUD operations, in this case with astronauts as a domain model.
+
+With this project we can learn how to *configure the library* and the basic use of the *ReactiveCrudRepository*.
 
 == 📚 Stack
 
 * *Language:* Java 15 (SDKMan + AdoptOpenJDK) 
 * *Framework*: Spring Boot 2.4+
-* *Libraries*: Starter Data R2DBC, R2DBC-postgresql
+* *Libraries*: Starter Data R2DBC, R2DBC-postgresql, TestContainers, Postgres driver
 * *Test Engine*: JUnit 5
 * *Test Libraries*: AssertJ, RestAssured, JavaFaker
 * *Build and dependency management:* Gradle
@@ -19,3 +24,73 @@ v0.0.1, 2020-11-23
 == 💁‍♀️ Useful information
 
 === 🚀 How to launch the project?
+
+To use this example you must have a *local Postgres* database instance. The resources contains two SQL files in order to prepare the database:
+
+* schema.sql
+* data.sql
+
+Local database is also mandatory to run the tests due to some TestContainers inconsistences.
+
+The example has this initial config:
+
+[source,shell]
+----
+spring.r2dbc.url=r2dbc:postgresql://localhost/arpj_example_04
+spring.r2dbc.username=arpj04
+spring.r2dbc.password=arpj04
+----
+
+Be careful and change your *database, username and password* name in the *spring.r2dbc.url* property.
+
+=== 🏹 Endpoints
+
+The project contains a *astronauts-api.http* file to run the calls from IntelliJ Idea.
+
+Here you have the cURL versions:
+
+[source,shell]
+----
+curl -X GET --location "http://localhost:8080/astronauts" -H "Accept: application/json"
+
+curl -X GET --location "http://localhost:8080/astronauts/358" -H "Accept: application/json"
+
+curl -X GET --location "http://localhost:8080/astronauts/random" -H "Accept: application/json"
+
+curl -X GET --location "http://localhost:8080/astronauts/filter?name=Arm" -H "Accept: application/json"
+
+curl -X DELETE --location "http://localhost:8080/astronauts/250" -H "Accept: application/json"
+
+curl -X POST --location "http://localhost:8080/astronauts" -H "Content-Type: application/json" \
+    -d "{
+          \"name\": \"Susana Pérez\",
+          \"status\": \"A\",
+          \"birthPlace\": \"Sevilla, ES\",
+          \"gender\": \"M\",
+          \"spaceFlights\": 15,
+          \"spaceWalks\": 100,
+          \"missions\": \"All\"
+        }"
+
+
+curl -X PUT --location "http://localhost:8080/astronauts" -H "Content-Type: application/json" \
+    -d "{
+          \"id\": 358,
+          \"name\": \"Santiago Garrido\",
+          \"status\": \"A\",
+          \"birthPlace\": \"Guadalajara, ES\",
+          \"gender\": \"M\",
+          \"spaceFlights\": 15,
+          \"spaceWalks\": 44,
+          \"missions\": \"All\"
+        }"
+----
+
+== 🦮 Guides
+
+* https://r2dbc.io/[R2DBC]
+* https://docs.spring.io/spring-data/r2dbc/docs/current/reference/html/#reference[Spring Data R2DBC - Reference Documentation]
+* https://www.baeldung.com/r2dbc[R2DBC – Reactive Relational Database Connectivity]
+* https://www.baeldung.com/spring-data-r2dbc[A Quick Look at R2DBC with Spring Data]
+* https://github.com/hantsy/spring-r2dbc-sample[GitHub - hantsy/spring-r2dbc-sample]
+* https://spring.io/guides/gs/accessing-data-r2dbc/[Accessing data with R2DBC]

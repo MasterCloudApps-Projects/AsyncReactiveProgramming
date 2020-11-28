@@ -16,4 +16,6 @@ public interface AstronautRepository {
     Mono<Astronaut> save(Astronaut astronaut);
 
     Mono<Void> update(Astronaut astronaut);
+
+    Flux<Astronaut> filter(AstronautCriteria criteria);
 }

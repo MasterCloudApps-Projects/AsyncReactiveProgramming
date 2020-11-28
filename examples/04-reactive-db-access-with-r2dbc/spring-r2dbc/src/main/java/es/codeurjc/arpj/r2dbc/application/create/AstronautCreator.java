@@ -15,10 +15,10 @@ public class AstronautCreator {
     private final AstronautRepository repository;
 
     public Mono<AstronautCreatorResponse> create(final AstronautCreateCommand command) {
-        return repository.save(AstronautCreator.toDomain(command)).map(AstronautCreator::toHttpResponse);
+        return repository.save(AstronautCreator.toDomain(command)).map(AstronautCreator::toResponse);
     }
 
-    private static AstronautCreatorResponse toHttpResponse(final Astronaut astronaut) {
+    private static AstronautCreatorResponse toResponse(final Astronaut astronaut) {
 
         return AstronautCreatorResponse.builder()
                 .id(astronaut.getId())
