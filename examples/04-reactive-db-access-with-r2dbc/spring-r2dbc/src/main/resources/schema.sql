@@ -1,7 +1,7 @@
-create table if not exists astronaut
+CREATE TABLE IF NOT EXISTS astronauts
 (
     id            bigserial not null
-        constraint astronaut_pk primary key,
+        constraint astronauts_pk primary key,
     name          varchar,
     status        varchar(1),
     birth_place   varchar(255),
@@ -10,4 +10,3 @@ create table if not exists astronaut
     space_walks   int default 0,
     missions      text
 );
-

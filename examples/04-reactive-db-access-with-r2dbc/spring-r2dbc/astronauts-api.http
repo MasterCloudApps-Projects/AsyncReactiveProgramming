@@ -13,6 +13,11 @@ Accept: application/json
 
 ###
 
+GET http://localhost:8080/astronauts/filter?name=Arm
+Accept: application/json
+
+###
+
 DELETE http://localhost:8080/astronauts/250
 Accept: application/json
 
@@ -22,9 +27,9 @@ POST http://localhost:8080/astronauts
 Content-Type: application/json
 
 {
-  "name": "Marcos de la Calle",
+  "name": "Susana Pérez",
   "status": "A",
-  "birthPlace": "Valladolid, ES",
+  "birthPlace": "Sevilla, ES",
   "gender": "M",
   "spaceFlights": 15,
   "spaceWalks": 100,

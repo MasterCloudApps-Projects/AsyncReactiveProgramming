@@ -1,29 +1,25 @@
 package es.codeurjc.arpj.r2dbc.infrastructure.http;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Data;
 
-@Getter
-@ToString
-@Builder(builderClassName = "Builder")
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AstronautHttpResponse {
 
-    private final Long id;
+    private Long id;
 
-    private final String name;
+    private String name;
 
-    private final String status;
+    private String status;
 
-    private final String birthPlace;
+    private String birthPlace;
 
-    private final String gender;
+    private String gender;
 
-    private final int spaceFlights;
+    private int spaceFlights;
 
-    private final int spaceWalks;
+    private int spaceWalks;
 
-    private final String missions;
+    private String missions;
 }

@@ -2,6 +2,9 @@ package es.codeurjc.arpj.r2dbc.infrastructure.http;
 
 import es.codeurjc.arpj.r2dbc.application.find.AstronautFinder;
 import es.codeurjc.arpj.r2dbc.application.find.AstronautFinderResponse;
+import es.codeurjc.arpj.r2dbc.application.search.AstronautSearchCommand;
+import es.codeurjc.arpj.r2dbc.application.search.AstronautSearcher;
+import es.codeurjc.arpj.r2dbc.application.search.AstronautSearcherResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
@@ -20,10 +23,12 @@ import static org.springframework.web.reactive.function.server.ServerResponse.ok
 public class AstronautHttpGetController {
 
     private static final String GET_ALL_PATH   = "/astronauts";
+    private static final String GET_FILTER     = "/astronauts/filter";
     private static final String GET_RANDOM     = "/astronauts/random";
     private static final String GET_BY_ID_PATH = "/astronauts/{id}";
 
-    private final AstronautFinder finder;
+    private final AstronautFinder   finder;
+    private final AstronautSearcher searcher;
 
     @Bean
     RouterFunction<ServerResponse> getAstronautRoutes() {
@@ -32,6 +37,12 @@ public class AstronautHttpGetController {
 
                 .GET(GET_ALL_PATH,
                         req -> ok().body(finder.findAll().map(AstronautHttpGetController::toHttpResponse),
+                                AstronautHttpResponse.class))
+
+                .GET(GET_FILTER,
+                        req -> ok().body(searcher
+                                        .search(new AstronautSearchCommand(req.queryParam("name").orElse("")))
+                                        .map(AstronautHttpGetController::toHttpResponse),
                                 AstronautHttpResponse.class))
 
                 .GET(GET_RANDOM,
@@ -50,16 +61,33 @@ public class AstronautHttpGetController {
 
     private static AstronautHttpResponse toHttpResponse(final AstronautFinderResponse response) {
 
-        return AstronautHttpResponse.builder()
-                .id(response.getId())
-                .name(response.getName())
-                .status(response.getStatus())
-                .birthPlace(response.getBirthPlace())
-                .gender(response.getGender())
-                .spaceFlights(response.getSpaceFlights())
-                .spaceWalks(response.getSpaceWalks())
-                .missions(response.getMissions())
-                .build();
+        final var httpResponse = new AstronautHttpResponse();
+
+        httpResponse.setId(response.getId());
+        httpResponse.setName(response.getName());
+        httpResponse.setStatus(response.getStatus());
+        httpResponse.setBirthPlace(response.getBirthPlace());
+        httpResponse.setGender(response.getGender());
+        httpResponse.setSpaceFlights(response.getSpaceFlights());
+        httpResponse.setSpaceWalks(response.getSpaceWalks());
+        httpResponse.setMissions(response.getMissions());
+
+        return httpResponse;
     }
 
+    private static AstronautHttpResponse toHttpResponse(final AstronautSearcherResponse response) {
+
+        final var httpResponse = new AstronautHttpResponse();
+
+        httpResponse.setId(response.getId());
+        httpResponse.setName(response.getName());
+        httpResponse.setStatus(response.getStatus());
+        httpResponse.setBirthPlace(response.getBirthPlace());
+        httpResponse.setGender(response.getGender());
+        httpResponse.setSpaceFlights(response.getSpaceFlights());
+        httpResponse.setSpaceWalks(response.getSpaceWalks());
+        httpResponse.setMissions(response.getMissions());
+
+        return httpResponse;
+    }
 }

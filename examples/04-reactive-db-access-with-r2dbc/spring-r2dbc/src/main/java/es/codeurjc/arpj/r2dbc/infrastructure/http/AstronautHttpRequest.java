@@ -1,29 +1,25 @@
 package es.codeurjc.arpj.r2dbc.infrastructure.http;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Getter
-@ToString
-@Builder(builderClassName = "Builder")
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@Data
+@NoArgsConstructor
 public class AstronautHttpRequest {
 
-    private final Long id;
+    private Long id;
 
-    private final String name;
+    private String name;
 
-    private final String status;
+    private String status;
 
-    private final String birthPlace;
+    private String birthPlace;
 
-    private final String gender;
+    private String gender;
 
-    private final int spaceFlights;
+    private int spaceFlights;
 
-    private final int spaceWalks;
+    private int spaceWalks;
 
-    private final String missions;
+    private String missions;
 }

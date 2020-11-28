@@ -1,3 +1,16 @@
+CREATE TABLE IF NOT EXISTS astronauts
+(
+    id            bigserial not null
+        constraint astronauts_pk primary key,
+    name          varchar,
+    status        varchar(1),
+    birth_place   varchar(255),
+    gender        varchar(1),
+    space_flights int default 0,
+    space_walks   int default 0,
+    missions      text
+);
+
 INSERT INTO astronauts (id, name, status, birth_place, gender, space_flights, space_walks, missions)
 VALUES (1, 'Joseph M. Acaba', 'A', 'Inglewood, CA', 'M', 2, 2, 'STS-119 (Discovery), ISS-31/32 (Soyuz)');
 INSERT INTO astronauts (id, name, status, birth_place, gender, space_flights, space_walks, missions)

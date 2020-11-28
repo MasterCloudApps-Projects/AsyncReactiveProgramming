@@ -61,9 +61,9 @@ https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/04-reactive-db-access-with-r2dbc[Example 04. *Reactive DB access with R2DBC*]: Simple API with an internal relational PostgreSQL repository. R2DBC provides reactive non-blocking APIs to relational databases
 
-* Example 05. *Protocols. RSocket* 🔒 _(Coming soon...)_
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/05-rsocket[Example 05. *Protocols. RSocket*]: A simple project to know thow the reactive binary protocol RSocket works. The example includes two small modules that communicate with each other, exploring the different possibilities that RSocket offers to us
 
-* Example ??. *Project Loom. Basic* 🔒 _(Coming soon...)_
+* Example 06. *Project Loom. Basic* 🔒 _(Coming soon...)_
 
 == 🔗 Resources
 
