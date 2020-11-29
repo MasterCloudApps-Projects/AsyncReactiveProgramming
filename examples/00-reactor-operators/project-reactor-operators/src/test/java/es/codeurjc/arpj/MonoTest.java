@@ -26,8 +26,9 @@ class MonoTest {
         System.out.println("Test 01: Basic Mono");
         printTestLine();
 
-        final String       myCharacter = FAKER.backToTheFuture().character();
-        final Mono<String> myMono      = Mono.just(myCharacter).log();
+        final String myCharacter = FAKER.backToTheFuture().character();
+
+        final Mono<String> myMono = Mono.just(myCharacter).log();
 
         StepVerifier
                 .create(myMono)
