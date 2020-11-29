@@ -15,10 +15,10 @@ public class DogHttpRepository implements DogRepository {
 
     private final WebClient webClient;
 
-    public DogHttpRepository(@Value("${dog.repository.url}") final String repoUrl) {
-        webClient = WebClient.builder()
-                .baseUrl(repoUrl)
-                .build();
+    public DogHttpRepository(@Value("${dog.repository.url}") final String repoUrl,
+                             final WebClient.Builder builder) {
+
+        webClient = builder.baseUrl(repoUrl).build();
     }
 
     @Override

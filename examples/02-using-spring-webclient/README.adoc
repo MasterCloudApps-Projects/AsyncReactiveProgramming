@@ -91,8 +91,8 @@ AnimalTest    : Elapsed time: 625 ms.
 
 == 🦮 Guides
 
-* https://developer.mozilla.org/es/docs/Server-sent_events[MDN Server-Sent Events]
-* https://github.com/public-apis/public-apis[Public APIs repository]
-* https://www.baeldung.com/java-faker[A Guide to JavaFaker]
+* https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-webclient[Spring Docs - Calling REST Services with WebClient]
 * https://www.baeldung.com/spring-5-webclient[Spring 5 WebClient]
+* https://www.baeldung.com/spring-webclient-resttemplate[Spring WebClient vs. RestTemplate]
 * https://www.baeldung.com/spring-webclient-simultaneous-calls[Simultaneous Spring WebClient Calls]
+* https://developer.mozilla.org/es/docs/Server-sent_events[MDN Server-Sent Events]

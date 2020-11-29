@@ -96,6 +96,14 @@ public class AstronautEntity {
         this.missions = missions;
     }
 
+    public String simpleToString() {
+        return "A -> {" +
+                "name='" + name + '\'' +
+                ", status='" + status + '\'' +
+                ", gender='" + gender + '\'' +
+                '}';
+    }
+
     @Override
     public String toString() {
         return "AstronautEntity{" +

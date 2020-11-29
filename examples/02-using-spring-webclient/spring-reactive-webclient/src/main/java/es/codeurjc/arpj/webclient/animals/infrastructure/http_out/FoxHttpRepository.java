@@ -2,7 +2,7 @@ package es.codeurjc.arpj.webclient.animals.infrastructure.http_out;
 
 import es.codeurjc.arpj.webclient.animals.domain.Fox;
 import es.codeurjc.arpj.webclient.animals.domain.FoxRepository;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Repository;
@@ -15,10 +15,8 @@ public class FoxHttpRepository implements FoxRepository {
 
     private final WebClient webClient;
 
-    public FoxHttpRepository(@Value("${fox.repository.url}") final String repoUrl) {
-        webClient = WebClient.builder()
-                .baseUrl(repoUrl)
-                .build();
+    public FoxHttpRepository(@Qualifier("foxClient") final WebClient foxesClient) {
+        this.webClient = foxesClient;
     }
 
     @Override

@@ -13,17 +13,17 @@ import reactor.core.publisher.Mono;
 @Repository
 public class CatHttpRepository implements CatRepository {
 
-    private final WebClient webClient;
+    private final String    repoUrl;
 
     public CatHttpRepository(@Value("${cat.repository.url}") final String repoUrl) {
-        webClient = WebClient.builder()
-                .baseUrl(repoUrl)
-                .build();
+        this.repoUrl = repoUrl;
     }
 
     @Override
     public Mono<Cat> random() {
-        return webClient.get()
+        return WebClient.create()
+                .get()
+                .uri(repoUrl)
                 .accept(MediaType.APPLICATION_JSON)
                 .exchangeToMono(response -> {
                     if (response.statusCode().equals(HttpStatus.OK)) {
