@@ -32,9 +32,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.8-SNAPSHOT
-| https://drive.google.com/file/d/1R2PqYFegie19t8Qa8m4-Ku8od_LdkUEe/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1JoI0SN9mxWVpOgZHTNIqWVTXZDLO-FhN/view?usp=sharing[pdf, window=_blank]
-|2020-11-22
+|0.0.9-SNAPSHOT
+| https://drive.google.com/file/d/10JkK6bvErd5nA9Z-BEg_7cFTHJzOYAEd/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1JtSdYhLGkF4eaObRA_8vrCt5dq213f4w/view?usp=sharing[pdf, window=_blank]
+|2020-11-29
 |🇪🇸
 
 |Asynchronous and reactive programming in Java

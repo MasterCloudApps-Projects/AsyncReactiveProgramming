@@ -27,12 +27,12 @@ POST http://localhost:8080/astronauts
 Content-Type: application/json
 
 {
-  "name": "Susana Pérez",
+  "name": "Jane Smith",
   "status": "A",
-  "birthPlace": "Sevilla, ES",
-  "gender": "M",
-  "spaceFlights": 15,
-  "spaceWalks": 100,
+  "birthPlace": "Austin, TX",
+  "gender": "F",
+  "spaceFlights": 4,
+  "spaceWalks": 10,
   "missions": "All"
 }
 
@@ -42,13 +42,13 @@ PUT http://localhost:8080/astronauts
 Content-Type: application/json
 
 {
-  "id": 358,
-  "name": "Santiago Garrido",
+  "id": 1000,
+  "name": "John Doe",
   "status": "A",
-  "birthPlace": "Guadalajara, ES",
+  "birthPlace": "Indianapolis, IN",
   "gender": "M",
-  "spaceFlights": 15,
-  "spaceWalks": 44,
+  "spaceFlights": 4,
+  "spaceWalks": 7,
   "missions": "All"
 }
 

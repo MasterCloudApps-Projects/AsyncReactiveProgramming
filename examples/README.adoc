@@ -1,6 +1,6 @@
 = Examples
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-11-28
+v1.0.0, 2020-11-29
 :toc:
 
 == 🗒 List of examples
@@ -115,6 +115,18 @@ Most examples have an API to query. For this, in each project that requires it, 
 
 Also some examples include screenshots of a console HTTP client called *HTTPie*.
 
+=== 📖 Public APIS
+
+During the development of the examples, we have always tried to use public APIs to create more realistic workflows.
+
+A good collection of public APIs can be found in the *public-apis/public-apis* repository. The link can be found in the *Guides* section.
+
+=== 🤡 Java Faker
+
+In certain examples, the *JavaFaker* library has been used to generate test data of different types.
+
+Links to its repository as well as a short summary of its functionalities are available in the *Guides* section.
+
 == 🦮 Guides
 
 * https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html[HTTP client in IntelliJ IDEA code editor, window=_blank]
@@ -122,3 +134,6 @@ Also some examples include screenshots of a console HTTP client called *HTTPie*.
 * https://sdkman.io/install[SDKMan Install]
 * https://sdkman.io/usage[SDKMan Usage]
 * https://httpie.io/[HTTPie – command-line HTTP client for the API era]
+* https://github.com/public-apis/public-apis[Public APIs repository]
+* https://github.com/DiUS/java-faker[DiUS/java-faker]
+* https://www.baeldung.com/java-faker[A Guide to JavaFaker]
