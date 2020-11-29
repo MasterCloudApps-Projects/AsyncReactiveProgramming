@@ -31,13 +31,13 @@ class FluxTest {
         System.out.println("Test 01: Basic Flux");
         printTestLine();
 
-        final Flux<Integer> flux = Flux.just(1, 2, 3, 4, 5).log();
+        final Flux<Integer> flux =
+                Flux.just(1, 2, 3, 4, 5).log();
 
         StepVerifier
                 .create(flux)
                 .expectNextCount(5)
-                .expectComplete()
-                .verify();
+                .verifyComplete();
     }
 
     @Test
