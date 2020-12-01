@@ -7,6 +7,8 @@ import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 import reactor.test.publisher.PublisherProbe;
 
+import static es.codeurjc.arpj.TestUtils.printTestLine;
+
 class PublisherProbeTest {
 
     private static final Faker FAKER = new Faker();
@@ -14,6 +16,9 @@ class PublisherProbeTest {
     @Test
     @DisplayName("Test 01: Publisher Probe. Basic")
     void basic_publisher_probe_1() {
+
+        System.out.println("Test 01: Publisher Probe. Basic");
+        printTestLine();
 
         final Mono<String> myDog = myComplexOperation(Mono.just(FAKER.dog().name()),
                 Mono.just(FAKER.animal().name())).log();
