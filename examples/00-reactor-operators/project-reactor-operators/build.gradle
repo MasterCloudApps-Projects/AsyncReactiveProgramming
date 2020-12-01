@@ -13,6 +13,9 @@ repositories {
 dependencies {
     implementation platform('io.projectreactor:reactor-bom:2020.0.1')
     implementation 'io.projectreactor:reactor-core'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'io.projectreactor.tools:blockhound:1.0.4.RELEASE'
+    compile 'io.projectreactor:reactor-tools'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     testImplementation 'io.projectreactor:reactor-test'
