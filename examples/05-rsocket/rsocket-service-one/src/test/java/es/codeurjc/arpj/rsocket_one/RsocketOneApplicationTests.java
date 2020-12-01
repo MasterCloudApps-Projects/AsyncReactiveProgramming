@@ -9,5 +9,4 @@ class RsocketOneApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
