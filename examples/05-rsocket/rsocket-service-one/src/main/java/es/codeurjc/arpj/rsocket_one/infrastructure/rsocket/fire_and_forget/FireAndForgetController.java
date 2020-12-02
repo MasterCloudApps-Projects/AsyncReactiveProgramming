@@ -1,4 +1,4 @@
-package es.codeurjc.arpj.rsocket_one.infrastructure.rsocket;
+package es.codeurjc.arpj.rsocket_one.infrastructure.rsocket.fire_and_forget;
 
 import es.codeurjc.arpj.rsocket_one.application.fire_and_forget.FireAndForgetCommand;
 import es.codeurjc.arpj.rsocket_one.application.fire_and_forget.FireAndForgetService;
