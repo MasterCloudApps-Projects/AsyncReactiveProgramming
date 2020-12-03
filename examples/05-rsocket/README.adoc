@@ -1,13 +1,120 @@
 = Example 05. RSocket
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.1, 2020-11-29
+v1.0.0, 2020-12-03
 :toc:
 
 == ℹ️ About
 
+The example has two modules: *Module one acts as the server. Module two acts as a client*
+
+The project contains code to test the different information flows that RSocket allows:
+
+- fire-and-forget
+- request-response
+- request-stream
+- channel
+
+The API sends and receives simple messages that carry an author and a message.
+
 == 📚 Stack
 
+* *Language:* Java 15 (SDKMan + AdoptOpenJDK) 
+* *Framework*: Spring Boot 2.4+
+* *Libraries*: Starter Data RSocket, JavaFaker
+* *Build and dependency management:* Maven
+* *Other*: Lombok
+
 == 💁‍♀️ Useful information
+
+=== 🚀 How to launch the project?
+
+The project is designed to be executed from our favorite IDE. Module 1 must be started first and then module 2, which is the one that acts as *requester*.
+
+Later in the console of each of the services we can see the messages and their responses preceded by a number from 1 to 4 that indicates each of the flows.
+
+Some examples of responses by flow (*random* content):
+
+*fire-and-forget*
+
+.Module 2 (Requester)
+[source,text]
+----
+[1][Fire and forget requester subscription]
+----
+
+.Module 1 (Server)
+[source,text]
+----
+[1][That is why you fail.][Edward Hopper]
+----
+
+*request-response*
+
+.Module 2 (Server)
+[source,text]
+----
+[2][Request response requester subscription]
+----
+
+.Module 1 (Server)
+[source,text]
+----
+[2][Now is the winter of our discontent.][Chaozu]
+----
+
+.Module 2 (Server)
+[source,text]
+----
+[2][You, Chaozu, said: "Now is the winter of our discontent." And my response is: "Good relations with the Wookiees, I have."][Rupert Giles]
+----
+
+*request-stream*
+
+.Module 2 (Requester)
+[source,text]
+----
+[3][Request stream requester subscription]
+----
+
+.Module 1 (Server)
+[source,text]
+----
+[3][Sheggorath, you are the Skooma Cat, for what is crazier than a cat on skooma?][Miles Teg]
+----
+
+.Module 2 (Requester)
+[source,text]
+----
+[3][There is nothing regular about Chuck Norris' expressions.][Daka Tuss]
+[3][Chuck Norris doesn't pair program.][Chaas Qeta]
+...
+----
+
+*channel*
+
+.Module 2 (Requester)
+[source,text]
+----
+[4][Channel requester subscription]
+----
+
+.Module 1 (Server)
+[source,text]
+----
+[4][True is it that we have seen better days.][Otto Whackew]
+[4][For ever and a day.][Gladys Eeya]
+[4][The fool doth think he is wise, but the wise man knows himself to be a fool.][Liv Long]
+...
+----
+
+.Module 2 (Requester)
+[source,text]
+----
+[4][Not stepping o'er the bounds of modesty.][Zollo]
+[4][See, how she leans her cheek upon her hand! O that I were a glove upon that hand, that I might touch that cheek!.][Karyl Vance]
+[4][It seems she hangs upon the cheek of night like a rich jewel in an Ethiope's ear.][Kemmett Pyke]
+...
+----
 
 == 🦮 Guides
 

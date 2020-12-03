@@ -1,4 +1,4 @@
-package es.codeurjc.arpj.rsocket_two.infrastructure.output.rsocket;
+package es.codeurjc.arpj.rsocket_two.infrastructure.output.rsocket.fire_and_forget;
 
 import com.github.javafaker.Faker;
 import lombok.AllArgsConstructor;
@@ -19,9 +19,11 @@ public class FireAndForgetRequester {
     public void fireAndForget() {
 
         requester.route("fire-and-forget")
-                .data(new FireAndForgetRequest(FAKER.yoda().quote(), FAKER.artist().name()))
+                .data(new FireAndForgetRequest(FAKER.yoda().quote(),
+                        FAKER.artist().name()))
                 .send()
-                .doOnSubscribe(x -> System.out.println("[1][Fire and forget requester subscription]"))
+                .doOnSubscribe(x ->
+                        System.out.println("[1][Fire and forget requester subscription]"))
                 .subscribe();
     }
 
