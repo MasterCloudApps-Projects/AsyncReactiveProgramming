@@ -11,7 +11,7 @@ public class FireAndForgetService {
     }
 
     private void printer(final FireAndForgetCommand command) {
-        System.out.println("\n" + command.author() + " said... \"" + command.message() + "\"");
+        System.out.println("[1][" + command.message() + "][" + command.author() + "]");
     }
 
 }

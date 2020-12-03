@@ -16,8 +16,10 @@ public class RequestResponseController {
     private final RequestResponseService service;
 
     @MessageMapping("request-response")
-    public Mono<RequestResponseRequest> fireAndForget(final RequestResponseRequest req) {
-        return service.requestAndResponse(Mono.just(new RequestResponseCommand(req.getAuthor(), req.getMessage())))
+    public Mono<RequestResponseRequest> requestResponse(final RequestResponseRequest req) {
+        return service
+                .requestAndResponse(Mono.just(
+                        new RequestResponseCommand(req.getAuthor(), req.getMessage())))
                 .map(r -> new RequestResponseRequest(r.message(), r.author()));
     }
 }

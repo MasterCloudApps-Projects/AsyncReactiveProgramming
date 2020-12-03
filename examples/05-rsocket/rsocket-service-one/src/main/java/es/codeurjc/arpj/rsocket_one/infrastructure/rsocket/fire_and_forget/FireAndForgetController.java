@@ -17,6 +17,7 @@ public class FireAndForgetController {
 
     @MessageMapping("fire-and-forget")
     public void fireAndForget(final FireAndForgetRequest request) {
-        service.start(Mono.just(new FireAndForgetCommand(request.getAuthor(), request.getMessage()))).subscribe();
+        service.start(Mono.just(new FireAndForgetCommand(request.getAuthor(),
+                request.getMessage()))).subscribe();
     }
 }

@@ -11,7 +11,9 @@ public class RequestResponseService {
 
     public Mono<RequestResponseResponse> requestAndResponse(final Mono<RequestResponseCommand> command) {
 
-        return command.map(r1 -> "You, " + r1.author() + ", said: \"" + r1.message() + "\"")
+        return command
+                .doOnNext(r0 -> System.out.println("[2][" + r0.message() + "][" + r0.author() + "]"))
+                .map(r1 -> "You, " + r1.author() + ", said: \"" + r1.message() + "\"")
                 .map(r2 -> r2 + " And my response is: \"" + FAKER.yoda().quote() + "\"")
                 .map(r3 -> new RequestResponseResponse(FAKER.buffy().characters(), r3));
     }

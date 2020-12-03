@@ -1,4 +1,4 @@
-package es.codeurjc.arpj.rsocket_two.infrastructure.output.rsocket;
+package es.codeurjc.arpj.rsocket_two.infrastructure.output.rsocket.request_response;
 
 import com.github.javafaker.Faker;
 import lombok.AllArgsConstructor;
@@ -16,7 +16,7 @@ public class RequestResponseRequester {
     private final RSocketRequester requester;
 
     @EventListener(ApplicationReadyEvent.class)
-    public void fireAndForget() {
+    public void requestResponse() {
 
         final var quote  = FAKER.shakespeare().kingRichardIIIQuote();
         final var author = FAKER.dragonBall().character();
