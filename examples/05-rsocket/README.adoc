@@ -1,6 +1,6 @@
 = Example 05. RSocket
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.0, 2020-12-03
+v1.0.0, 2020-12-04
 :toc:
 
 == ℹ️ About
@@ -34,7 +34,7 @@ Later in the console of each of the services we can see the messages and their r
 
 Some examples of responses by flow (*random* content):
 
-*fire-and-forget*
+[.underline]#*[1] fire-and-forget*#
 
 .Module 2 (Requester)
 [source,text]
@@ -48,7 +48,7 @@ Some examples of responses by flow (*random* content):
 [1][That is why you fail.][Edward Hopper]
 ----
 
-*request-response*
+[.underline]#*[2] request-response*#
 
 .Module 2 (Server)
 [source,text]
@@ -68,7 +68,7 @@ Some examples of responses by flow (*random* content):
 [2][You, Chaozu, said: "Now is the winter of our discontent." And my response is: "Good relations with the Wookiees, I have."][Rupert Giles]
 ----
 
-*request-stream*
+[.underline]#*[3] request-stream*#
 
 .Module 2 (Requester)
 [source,text]
@@ -90,7 +90,7 @@ Some examples of responses by flow (*random* content):
 ...
 ----
 
-*channel*
+[.underline]#*[4] channel*#
 
 .Module 2 (Requester)
 [source,text]
@@ -120,6 +120,6 @@ Some examples of responses by flow (*random* content):
 
 * https://rsocket.io/[RSocket - Application protocol providing Reactive Streams semantics]
 * https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#rsocket[Spring Docs - RSocket]
-* https://github.com/rsocket/rsocket-java[RSocket Java]
 * https://www.baeldung.com/rsocket[Introduccion to RSocket]
 * https://www.baeldung.com/spring-boot-rsocket[RSocket Using Spring Boot]
+* https://github.com/rsocket/rsocket-java[RSocket Java]

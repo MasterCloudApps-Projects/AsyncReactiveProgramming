@@ -1,0 +1,24 @@
+= Example 06. Project Loom
+Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
+v0.0.1, 2020-12-04
+:toc:
+
+== ℹ️ About
+
+== 📚 Stack
+
+* *Language:* Java 16 Early Access *(SDKMan) java 16.ea.9.lm-open*
+* *Libraries*: JUnit 5, AssertJ
+* *Build and dependency management:* Maven
+
+== 💁‍♀️ Useful information
+
+=== 🚀 How to launch the project?
+
+== 🦮 Guides
+
+* https://wiki.openjdk.java.net/display/loom/Main[OpenJDK Loom Wiki]
+* https://github.com/openjdk/loom[Project Loom repository]
+* https://jdk.java.net/loom/[Project Loom Early-Access Builds]
+* https://www.baeldung.com/openjdk-project-loom[OpenJDK Project Loom - Baeldung]
+* https://www.javaadvent.com/2020/12/project-loom-and-structured-concurrency.html[Project Loom and structured concurrency]

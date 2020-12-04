@@ -27,8 +27,9 @@ v1.0.0, 2020-11-29
 | https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/05-rsocket[Example 05. *Protocols. RSocket*]
 | A simple project to know thow the reactive binary protocol RSocket works. The example includes two small modules that communicate with each other, exploring the different possibilities that RSocket offers to us
 
-| Example 06. *Project Loom. Basic* 
-|🔒 _(Coming soon...)_
+| https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/06-project-loom[Example 06. *Project Loom*]
+| Example for a first contact with Project Loom, its implementation and how to start with Virtual Threads
+
 |===
 
 == 💁‍♀️ Useful information
