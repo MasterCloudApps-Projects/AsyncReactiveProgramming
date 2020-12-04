@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.14, 2020-12-03
+v0.0.15, 2020-12-04
 :toc:
 
 ++++
@@ -32,9 +32,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.13-SNAPSHOT
-| https://drive.google.com/file/d/1Pc_VPcCt_3hwHoagnPW6kErsqBFadcNi/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1Kbgj98mR5wDTxKN57D_2twRuPHVq9XhW/view?usp=sharing[pdf, window=_blank]
-|2020-12-03
+|0.0.14-SNAPSHOT
+| https://drive.google.com/file/d/10_VuEaIZ5M0RTJU-D_MO5yB_nNOvFqV3/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1NNjiHppqJEZLECzwcN-WSSWs_2bNrsr5/view?usp=sharing[pdf, window=_blank]
+|2020-12-04
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
@@ -64,7 +64,7 @@ https://maven.apache.org/[*Maven (3.6+)*, window=_blank] or https://gradle.org/[
 
 * https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/05-rsocket[Example 05. *Protocols. RSocket*]: A simple project to know thow the reactive binary protocol RSocket works. The example includes two small modules that communicate with each other, exploring the different possibilities that RSocket offers to us
 
-* Example 06. *Project Loom. Basic* 🔒 _(Coming soon...)_
+* https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/examples/06-project-loom[Example 06. *Project Loom*]: Example for a first contact with Project Loom, its implementation and how to start with Virtual Threads
 
 == 🔗 Resources
 

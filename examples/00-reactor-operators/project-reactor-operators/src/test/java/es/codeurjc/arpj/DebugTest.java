@@ -22,7 +22,8 @@ class DebugTest {
 
         Flux.just(1, 2, 3, null, 5, 6, 7, null, 8, 9, 10)
                 .map(x -> "This is the number: " + x)
-                .doOnNext(System.out::println).subscribe();
+                .doOnNext(System.out::println)
+                .subscribe();
     }
 
     @Test
