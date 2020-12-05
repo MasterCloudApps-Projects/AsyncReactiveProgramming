@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.15, 2020-12-04
+v0.0.16, 2020-12-05
 :toc:
 
 ++++
@@ -250,6 +250,11 @@ Project Loom is to intended to explore, incubate and deliver Java VM features an
 |Mark Paluch
 |2020
 |🇬🇧 📋
+
+| https://www.javaadvent.com/2020/12/project-loom-and-structured-concurrency.html[Project Loom and structured concurrency, window=_blank]
+|Cay Horstmann
+|2020
+|🇬🇧 📋
 |===
 
 === ⚒️ Libraries and tools
@@ -327,14 +332,19 @@ Designed for both development and production time use
 |===
 |Name |Author |Platform |Lang
 
-| https://learning.oreilly.com/library/view/reactive-spring-boot/9780136836421/[Reactive Spring, 2nd Edition, window=_blank]
-|Josh Long
-|Oreilly
+| https://www.youtube.com/playlist?list=PLL8woMHwr36EDxjUoCzboZjedsnhLP1j4[Java concurrency and multithreading (playlist), window=_blank]
+|Jakob Jenkov
+|Youtube
 |🇬🇧
 
 | https://www.udemy.com/course/efficient-java-multithreading-with-executors/[Efficient Java Multithreading and Concurrency with Executors, window=_blank]
 |Arun Kumar
 |Udemy
+|🇬🇧
+
+| https://learning.oreilly.com/library/view/reactive-spring-boot/9780136836421/[Reactive Spring, 2nd Edition, window=_blank]
+|Josh Long
+|Oreilly
 |🇬🇧
 |===
 

@@ -5,6 +5,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Scheduler;
+import reactor.core.scheduler.Schedulers;
 import reactor.test.StepVerifier;
 import reactor.util.function.Tuple2;
 
@@ -14,6 +16,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 import static es.codeurjc.arpj.TestUtils.printSectionLine;
@@ -91,10 +94,10 @@ class FluxTest {
     }
 
     @Test
-    @DisplayName("Test 03: Flux transform")
-    void flux_transform() {
+    @DisplayName("Test 03: Flux map and cast")
+    void flux_map_cast() {
 
-        System.out.println("Test 03: Flux transform");
+        System.out.println("Test 03: Flux map and cast");
         printTestLine();
 
         final String[]      strings     = {"one", "two", "three", "four", "five"};
@@ -307,6 +310,104 @@ class FluxTest {
         StepVerifier
                 .create(scan)
                 .expectNextCount(11)
+                .expectComplete()
+                .verify();
+    }
+
+    @Test
+    @DisplayName("Test 08: Transform")
+    void flux_transform() {
+
+        System.out.println("Test 08: Transform");
+        printTestLine();
+
+        final Scheduler myParallel = Schedulers.newParallel("my-parallel", 2);
+
+        final Function<Flux<String>, Flux<Integer>> myTransformation =
+                flux -> flux.publishOn(myParallel).map(String::length);
+
+        final String[]      strings     = {"one", "two", "three", "four", "five"};
+        final Flux<Integer> mapToLength = Flux.fromArray(strings).transform(myTransformation).log();
+
+        StepVerifier
+                .create(mapToLength)
+                .expectNextCount(5)
+                .expectComplete()
+                .verify();
+    }
+
+    @Test
+    @DisplayName("Test 09: Concat map")
+    void flux_concat_map() {
+
+        System.out.println("Test 09: Concat map");
+        printTestLine();
+
+        final Scheduler myParallel = Schedulers.newParallel("my-parallel", 4);
+
+        final Flux<Integer> numbers = Flux.range(0, 10)
+                .window(2)
+                .concatMap(g -> g.flatMap(this::processing).subscribeOn(myParallel))
+                .log();
+
+        StepVerifier
+                .create(numbers)
+                .expectNextCount(10)
+                .expectComplete()
+                .verify();
+
+        printTestLine();
+
+        final Flux<Integer> numbers2 = Flux.range(0, 10)
+                .window(2)
+                .flatMap(g -> g.flatMap(this::processing).subscribeOn(myParallel))
+                .log();
+
+        StepVerifier
+                .create(numbers2)
+                .expectNextCount(10)
+                .expectComplete()
+                .verify();
+    }
+
+    private Mono<Integer> processing(final Integer input) {
+
+        final var random = new Random();
+
+        final var millis = random.nextInt(10) * 100L;
+
+        System.out.println("Sleeping [" + input + "] " + millis + " milliseconds... @ "
+                + Thread.currentThread().getName());
+
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        return Mono.just(input);
+    }
+
+    @Test
+    @DisplayName("Test 10: Handle")
+    void flux_handle() {
+
+        System.out.println("Test 10: Handle");
+        printTestLine();
+
+        final Flux<Integer> numbers = Flux.range(0, 10)
+                .handle((n, s) -> {
+                    if (n % 2 == 0) {
+                        System.out.println("Even!!! -> " + n);
+                        s.next(n);
+                    } else {
+                        s.next(0);
+                    }
+                }).cast(Integer.class).log();
+
+        StepVerifier
+                .create(numbers)
+                .expectNextCount(10)
                 .expectComplete()
                 .verify();
     }
