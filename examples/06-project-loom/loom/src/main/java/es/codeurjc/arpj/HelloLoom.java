@@ -6,14 +6,11 @@ public class HelloLoom {
 
         System.out.println("Hello @ " + Thread.currentThread().getName());
 
-        Thread myVt = Thread.builder()
-                .virtual()
-                .name("my-virtual-thread")
-                .task(() -> System.out.println("Hello Loom! @ " + Thread.currentThread().getName()))
-                .build();
-        myVt.start();
+        final Thread myVt = Thread.startVirtualThread(
+                () -> System.out.println("Hello Loom! @ "
+                        + Thread.currentThread().getName()));
+        myVt.join();
 
-        Thread.sleep(1000);
         System.out.println("Goodbye @ " + Thread.currentThread().getName());
     }
 }
