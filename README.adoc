@@ -1,7 +1,6 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v0.0.16, 2020-12-05
-:toc:
+v0.0.16, 2020-12-06
 
 ++++
 <p align="center">
@@ -32,9 +31,9 @@ The project also provides, as documentation, a presentation about asynchronous a
 |Name |Version |Download |Updated at | Lang
 
 |Programación asíncrona y reactiva en Java 
-|0.0.14-SNAPSHOT
-| https://drive.google.com/file/d/10_VuEaIZ5M0RTJU-D_MO5yB_nNOvFqV3/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1NNjiHppqJEZLECzwcN-WSSWs_2bNrsr5/view?usp=sharing[pdf, window=_blank]
-|2020-12-04
+|0.0.15-SNAPSHOT
+| https://drive.google.com/file/d/1tKLL--rBfonlss4V3wWtxiok1eGiU9le/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1CA6qHuB_3BLbD9eX2ibbAhkKR159CYAv/view?usp=sharing[pdf, window=_blank]
+|2020-12-06
 |🇪🇸
 
 |Asynchronous and reactive programming in Java
