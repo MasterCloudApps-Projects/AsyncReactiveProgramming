@@ -33,7 +33,7 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 |Programación asíncrona y reactiva en Java 
 |1.0.0-M1
-| https://drive.google.com/file/d/1fUeRK2f4S3cV50-atfIrqswEHoeu4HGc/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1tb4gk7pkC-hMosvAjXBN9YEG0VsBLOi_/view?usp=sharing[pdf, window=_blank]
+| https://drive.google.com/file/d/1fUeRK2f4S3cV50-atfIrqswEHoeu4HGc/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1uJbjb3PBRYBUpaug1C5tr-2HsTK$$_$$8TY$$_$$/view?usp=sharing[pdf, window=_blank]
 |2020-12-07
 |🇪🇸
 
