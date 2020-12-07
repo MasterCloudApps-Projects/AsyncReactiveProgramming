@@ -1,6 +1,7 @@
 = Asynchronous & reactive programming in Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
 v1.0.0, 2020-12-07
+:toc:
 
 ++++
 <p align="center">
