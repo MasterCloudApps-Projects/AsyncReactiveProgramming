@@ -13,7 +13,7 @@ The list of examples is as follows:
 * Loom Thread Builder
 * Three Million Tasks
 * Structured Concurrency
-* Cancellations and deadlines
+* Cancellations and Deadlines
 
 == 📚 Stack
 
