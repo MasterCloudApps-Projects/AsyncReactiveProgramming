@@ -1,6 +1,6 @@
-= Asynchronous & reactive programming in Java
+= Asynchronous & reactive programming with Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.1, 2020-12-07
+v1.0.2, 2020-12-08
 :toc:
 
 ++++
@@ -31,17 +31,17 @@ The project also provides, as documentation, a presentation about asynchronous a
 |===
 |Name |Version |Download |Updated at | Lang
 
-|Programación asíncrona y reactiva en Java 
-|1.0.0-M1
-| https://drive.google.com/file/d/1fUeRK2f4S3cV50-atfIrqswEHoeu4HGc/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1uJbjb3PBRYBUpaug1C5tr-2HsTK$$_$$8TY$$_$$/view?usp=sharing[pdf, window=_blank]
-|2020-12-07
-|🇪🇸
+| Programación asíncrona y reactiva con Java 
+| 1.0.0
+| https://drive.google.com/file/d/1Whum-P6f5nqzq3Qj55C-p2DNLFvEKDBC/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/1bnDI5x$$_$$jeQ1uV9MXXmi8-jbUGZ0Rfm9Z/view?usp=sharing[pdf, window=_blank]
+| 2020-12-08
+| 🇪🇸
 
-|Asynchronous and reactive programming in Java
-|0.0.3-SNAPSHOT
+| Asynchronous and reactive programming with Java
+| 0.0.3-SNAPSHOT
 | https://drive.google.com/file/d/1vfMmL__LiVgOm2fLsEiZVVHBcqgiD4Ez/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/11zZQBMAHh0cgV2gVhK-6L5KEZ4i9-hSv/view?usp=sharing[pdf, window=_blank]
-|2020-11-18
-|🇬🇧
+| 2020-11-18
+| 🇬🇧
 |===
 
 == 📐 Examples
