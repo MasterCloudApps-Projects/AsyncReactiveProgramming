@@ -1,6 +1,6 @@
 = Asynchronous & reactive programming with Java
 Marcos de la Calle Samaniego, @marcosDLCS <marcos.dlcs@gmail.com>
-v1.0.3, 2020-12-20
+v1.0.4, 2020-12-20
 :toc:
 
 ++++
@@ -48,7 +48,7 @@ The project also provides, as documentation, a presentation about asynchronous a
 
 On the other hand, the academic resources delivered as part of the completion of the project are also included:
 
-[cols="10,2,2,2,1"]
+[cols="10,2,2,3,1"]
 |===
 |Name |Version |Download |Updated at | Lang
 
