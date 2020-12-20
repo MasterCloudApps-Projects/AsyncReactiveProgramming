@@ -52,13 +52,13 @@ On the other hand, the academic resources delivered as part of the completion of
 |===
 |Name |Version |Download |Updated at | Lang
 
-| *Memoria académica*: Programación asíncrona y reactiva con Java
+| *Memoria*: Programación asíncrona y reactiva con Java
 | 1.0.0
 | https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/resources/academic/memoria.pdf[pdf, window=_blank]
 | 2020-12-14
 | 🇪🇸
 
-| *Presentación TFM*: Programación asíncrona y reactiva con Java
+| *Presentación*: Programación asíncrona y reactiva con Java
 | 1.0.0
 | https://github.com/MasterCloudApps-Projects/AsyncReactiveProgramming/tree/master/resources/academic/presentacion_tfm.pdf[pdf, window=_blank]
 | 2020-12-14
