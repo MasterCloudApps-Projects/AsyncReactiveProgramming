@@ -38,7 +38,7 @@ The project also provides, as documentation, a presentation about asynchronous a
 | 🇪🇸
 
 | *Slides*: Asynchronous and reactive programming with Java
-| 0.0.3-SNAPSHOT
+| 0.0.3
 | https://drive.google.com/file/d/1vfMmL__LiVgOm2fLsEiZVVHBcqgiD4Ez/view?usp=sharing[pptx, window=_blank] or https://drive.google.com/file/d/11zZQBMAHh0cgV2gVhK-6L5KEZ4i9-hSv/view?usp=sharing[pdf, window=_blank]
 | 2020-11-18
 | 🇬🇧
